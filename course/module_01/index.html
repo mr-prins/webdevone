@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_01/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Git and GitHub - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Git and GitHub";
+        var mkdocs_page_input_path = "course\\module_01.md";
+        var mkdocs_page_url = "/course/module_01/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Git and GitHub</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-git">What is Git?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-github">What is GitHub?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-git-and-github-work-together">How Git and GitHub Work Together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#some-basic-git-commands">Some Basic Git Commands</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started-with-github">Getting Started with GitHub</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Git and GitHub</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="git-and-github">Git and Github</h1>
+<h2 id="what-is-git">What is Git?</h2>
+<p>Git is a powerful tool used by software developers to manage and keep track of changes in their code. Think of it as a sophisticated "undo" button for your projects, allowing you to revert to previous versions of your code, track changes over time, and collaborate with others without losing your work.</p>
+<p>Here are some key features of Git:</p>
+<ul>
+<li><strong>Version Control:</strong> Git keeps a history of all changes made to your code, so you can see what was changed, who changed it, and when.</li>
+<li><strong>Branching and Merging:</strong> You can create branches to work on new features or bug fixes without affecting the main codebase. Once your work is complete, you can merge it back into the main branch.</li>
+<li><strong>Collaboration:</strong> Multiple people can work on the same project simultaneously without overwriting each other's work.</li>
+</ul>
+<h2 id="what-is-github">What is GitHub?</h2>
+<p>GitHub is an online platform that hosts Git repositories, making it easier for you to manage your projects and collaborate with others. It's like a social network for programmers, where you can share your code, contribute to others' projects, and showcase your work.</p>
+<p>Here are some things you can do with GitHub:</p>
+<ul>
+<li><strong>Repository Hosting:</strong> Store your projects in repositories, which are like folders for your code.</li>
+<li><strong>Collaboration Tools:</strong> Use pull requests to review and discuss changes before merging them into your project.</li>
+<li><strong>Project Management:</strong> Organize your work with issues, milestones, and project boards.</li>
+<li><strong>Community Engagement:</strong> Follow other developers, contribute to open-source projects, and build your professional network.</li>
+</ul>
+<h2 id="how-git-and-github-work-together">How Git and GitHub Work Together</h2>
+<ol>
+<li><strong>Initialize a Repository:</strong> Start by creating a new repository on your computer using Git. This will track changes to your project files.</li>
+<li><strong>Make Changes:</strong> Write code, make changes, and commit them to your local repository. A commit is like a snapshot of your project at a particular point in time.</li>
+<li><strong>Push to GitHub:</strong> Once you have a series of commits, you can push them to GitHub, making your changes available online.</li>
+<li><strong>Collaborate:</strong> Others can clone your repository, make changes, and submit pull requests. You can review these changes and merge them into your project.</li>
+</ol>
+<h2 id="some-basic-git-commands">Some Basic Git Commands</h2>
+<p>Here are some essential Git commands you'll use frequently:</p>
+<ul>
+<li><code>git init</code>: Initializes a new Git repository.</li>
+<li><code>git clone [url]</code>: Copies an existing repository from GitHub to your local machine.</li>
+<li><code>git status</code>: Shows the status of changes in your working directory.</li>
+<li><code>git add [file]</code>: Stages a file, preparing it for a commit.</li>
+<li><code>git commit -m "message"</code>: Commits the staged changes with a descriptive message.</li>
+<li><code>git push</code>: Uploads your commits to GitHub.</li>
+<li><code>git pull</code>: Fetches and integrates changes from GitHub to your local repository.</li>
+</ul>
+<h2 id="getting-started-with-github">Getting Started with GitHub</h2>
+<ol>
+<li><strong>Sign Up:</strong> Create a free account on GitHub.</li>
+<li><strong>Create a Repository:</strong> Click the "New" button on your GitHub dashboard to create a new repository.</li>
+<li><strong>Clone the Repository:</strong> Use <code>git clone [url]</code> to copy the repository to your computer.</li>
+<li><strong>Start Coding:</strong> Make changes to your project files, commit them, and push them to GitHub.</li>
+</ol>
+<p>By using Git and GitHub, you'll learn valuable skills for managing your code and collaborating with others. As we progress through the course, you'll become more comfortable with these tools and see how they fit into the larger world of software development.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../links/" class="btn btn-neutral float-right" title="Useful Links">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../links/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
