@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_18/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Linking and Navigation - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Linking and Navigation";
+        var mkdocs_page_input_path = "course\\module_18.md";
+        var mkdocs_page_url = "/course/module_18/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Linking and Navigation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-links">Creating Links</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-hyperlinks">Basic Hyperlinks</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-basic-hyperlink">Example of a Basic Hyperlink</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#internal-links">Internal Links</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-an-internal-link">Example of an Internal Link</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#external-links">External Links</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-an-external-link">Example of an External Link</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#anchor-links">Anchor Links</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-an-anchor-link">Example of an Anchor Link</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#email-links">Email Links</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-an-email-link">Example of an Email Link</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-navigation-menus">Creating Navigation Menus</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-navigation-menu">Basic Navigation Menu</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-basic-navigation-menu">Example of a Basic Navigation Menu</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#horizontal-navigation-menu">Horizontal Navigation Menu</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-horizontal-navigation-menu">Example of a Horizontal Navigation Menu</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vertical-navigation-menu">Vertical Navigation Menu</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-vertical-navigation-menu">Example of a Vertical Navigation Menu</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dropdown-navigation-menu">Dropdown Navigation Menu</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-simple-dropdown-menu">Example of a Simple Dropdown Menu</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices-for-navigation">Best Practices for Navigation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#consistency">Consistency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clarity">Clarity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#accessibility">Accessibility</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mobile-friendly-navigation">Mobile-Friendly Navigation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practical-activity-building-a-navigation-menu">Practical Activity: Building a Navigation Menu</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Linking and Navigation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="linking-and-navigation">Linking and Navigation</h1>
+<h2 id="overview">Overview</h2>
+<p>Links are the building blocks of the web, allowing users to navigate between different pages, sections, and websites. In this module, you will learn how to create various types of links, including internal, external, and anchor links. You will also explore how to build navigation menus that provide a clear and intuitive way for users to explore your website.</p>
+<h2 id="creating-links">Creating Links</h2>
+<h3 id="basic-hyperlinks">Basic Hyperlinks</h3>
+<p>The <code>&lt;a&gt;</code> tag is used to create hyperlinks in HTML. The <code>href</code> attribute defines the destination of the link.</p>
+<h4 id="example-of-a-basic-hyperlink">Example of a Basic Hyperlink</h4>
+<pre><code class="language-html">&lt;a href=&quot;https://www.example.com&quot;&gt;Visit Example Website&lt;/a&gt;
+</code></pre>
+<ul>
+<li><strong><code>href</code></strong>: Specifies the URL of the page the link navigates to.</li>
+<li><strong>Link Text</strong>: The clickable text that users see.</li>
+</ul>
+<h3 id="internal-links">Internal Links</h3>
+<p>Internal links navigate within the same website, often linking to different pages or sections. The <code>href</code> attribute can point to a relative path for internal links.</p>
+<h4 id="example-of-an-internal-link">Example of an Internal Link</h4>
+<pre><code class="language-html">&lt;a href=&quot;about.html&quot;&gt;Learn more about us&lt;/a&gt;
+</code></pre>
+<p>In this example, the link navigates to the <code>about.html</code> page within the same website.</p>
+<h3 id="external-links">External Links</h3>
+<p>External links navigate to other websites. Always use absolute URLs for external links.</p>
+<h4 id="example-of-an-external-link">Example of an External Link</h4>
+<pre><code class="language-html">&lt;a href=&quot;https://www.wikipedia.org&quot; target=&quot;_blank&quot;&gt;Visit Wikipedia&lt;/a&gt;
+</code></pre>
+<ul>
+<li><strong><code>target="_blank"</code></strong>: Opens the link in a new tab or window.</li>
+</ul>
+<h3 id="anchor-links">Anchor Links</h3>
+<p>Anchor links navigate to specific sections within the same page. They are created using the <code>href</code> attribute with a <code>#</code> followed by the <code>id</code> of the target element.</p>
+<h4 id="example-of-an-anchor-link">Example of an Anchor Link</h4>
+<pre><code class="language-html">&lt;a href=&quot;#section2&quot;&gt;Go to Section 2&lt;/a&gt;
+
+&lt;h2 id=&quot;section2&quot;&gt;Section 2&lt;/h2&gt;
+&lt;p&gt;This is the content of Section 2.&lt;/p&gt;
+</code></pre>
+<ul>
+<li><strong><code>id</code> Attribute</strong>: The target element must have an <code>id</code> that matches the link’s <code>href</code> value.</li>
+</ul>
+<h3 id="email-links">Email Links</h3>
+<p>You can create links that open the user’s email client to send an email. This is done using the <code>mailto:</code> scheme.</p>
+<h4 id="example-of-an-email-link">Example of an Email Link</h4>
+<pre><code class="language-html">&lt;a href=&quot;mailto:info@example.com&quot;&gt;Email Us&lt;/a&gt;
+</code></pre>
+<ul>
+<li><strong><code>mailto:</code></strong>: Opens the default email client with a new message addressed to the specified email.</li>
+</ul>
+<h2 id="creating-navigation-menus">Creating Navigation Menus</h2>
+<h3 id="basic-navigation-menu">Basic Navigation Menu</h3>
+<p>Navigation menus are essential for helping users navigate your website. A basic navigation menu can be created using an unordered list (<code>&lt;ul&gt;</code>) and list items (<code>&lt;li&gt;</code>), with each item containing a link.</p>
+<h4 id="example-of-a-basic-navigation-menu">Example of a Basic Navigation Menu</h4>
+<pre><code class="language-html">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;services.html&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+<h3 id="horizontal-navigation-menu">Horizontal Navigation Menu</h3>
+<p>You can create a horizontal navigation menu by styling the list items and links using CSS.</p>
+<h4 id="example-of-a-horizontal-navigation-menu">Example of a Horizontal Navigation Menu</h4>
+<pre><code class="language-css">nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+</code></pre>
+<pre><code class="language-html">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;services.html&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+<p>In this example, the navigation menu is styled to display horizontally with a dark background and white text.</p>
+<h3 id="vertical-navigation-menu">Vertical Navigation Menu</h3>
+<p>A vertical navigation menu stacks the links vertically. This can be achieved by styling the list items to display in a block format.</p>
+<h4 id="example-of-a-vertical-navigation-menu">Example of a Vertical Navigation Menu</h4>
+<pre><code class="language-css">nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+nav ul li {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  color: white;
+}
+</code></pre>
+<pre><code class="language-html">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;services.html&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+<h3 id="dropdown-navigation-menu">Dropdown Navigation Menu</h3>
+<p>Dropdown menus provide additional navigation options that are revealed when the user hovers over or clicks a parent item. This requires additional CSS and sometimes JavaScript for advanced functionality.</p>
+<h4 id="example-of-a-simple-dropdown-menu">Example of a Simple Dropdown Menu</h4>
+<pre><code class="language-css">nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  float: none;
+}
+
+nav ul li ul li a {
+  padding: 12px 16px;
+}
+</code></pre>
+<pre><code class="language-html">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;services.html&quot;&gt;Services&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#webdev&quot;&gt;Web Development&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#design&quot;&gt;Web Design&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#seo&quot;&gt;SEO&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+<p>In this example, the "Services" menu item has a dropdown that includes additional links.</p>
+<h2 id="best-practices-for-navigation">Best Practices for Navigation</h2>
+<h3 id="consistency">Consistency</h3>
+<p>Keep your navigation consistent across all pages of your website to provide a seamless user experience. The placement, style, and structure of your navigation menus should remain the same.</p>
+<h3 id="clarity">Clarity</h3>
+<p>Use clear and descriptive labels for your navigation links. Users should be able to understand where each link will take them at a glance.</p>
+<h3 id="accessibility">Accessibility</h3>
+<p>Ensure that your navigation is accessible to all users, including those using screen readers. Use semantic HTML (e.g., <code>&lt;nav&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>) and provide alternative text for any images used in navigation.</p>
+<h3 id="mobile-friendly-navigation">Mobile-Friendly Navigation</h3>
+<p>Consider using responsive design techniques, such as collapsible menus or off-canvas navigation, to ensure your navigation is usable on mobile devices.</p>
+<h2 id="practical-activity-building-a-navigation-menu">Practical Activity: Building a Navigation Menu</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a responsive navigation menu that includes internal, external, and anchor links. Practice building both horizontal and dropdown menus.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create an HTML file named <code>navigation.html</code>.</li>
+<li>Add a basic navigation menu using the <code>&lt;nav&gt;</code> element and an unordered list.</li>
+<li>Include links to other pages, sections within the same page, and external websites.</li>
+<li>Style the navigation menu to display horizontally using CSS.</li>
+<li>Add a dropdown menu for one of the navigation items.</li>
+<li>Ensure the navigation is mobile-friendly by using responsive design techniques.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Use relative paths for internal links to maintain flexibility when moving files around your project.</li>
+<li>Use <code>:hover</code> and <code>:focus</code> pseudo-classes in CSS to provide visual feedback when users interact with navigation links.</li>
+<li>Test your navigation on different devices and screen sizes to ensure usability.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_17/" class="btn btn-neutral float-left" title="Forms and Inputs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_19/" class="btn btn-neutral float-right" title="Best Practices in HTML II">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_17/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_19/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

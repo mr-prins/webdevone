@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_16/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>HTML5 Semantic Elements - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "HTML5 Semantic Elements";
+        var mkdocs_page_input_path = "course\\module_16.md";
+        var mkdocs_page_url = "/course/module_16/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">HTML5 Semantic Elements</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-are-semantic-elements">What Are Semantic Elements?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#definition-of-semantic-elements">Definition of Semantic Elements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#importance-of-semantic-elements">Importance of Semantic Elements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-html5-semantic-elements">Key HTML5 Semantic Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#header">&lt;header&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nav">&lt;nav&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_1">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#main">&lt;main&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_2">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#article">&lt;article&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_3">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#section">&lt;section&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_4">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aside">&lt;aside&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_5">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#footer">&lt;footer&gt;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_6">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-semantic-elements-effectively">Using Semantic Elements Effectively</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices-for-semantic-elements">Best Practices for Semantic Elements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-combining-semantic-elements">Example: Combining Semantic Elements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practical-activity-structuring-a-webpage-with-semantic-elements">Practical Activity: Structuring a Webpage with Semantic Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">HTML5 Semantic Elements</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="html5-semantic-elements">HTML5 Semantic Elements</h1>
+<h2 id="overview">Overview</h2>
+<p>HTML5 introduced a variety of semantic elements that provide more meaningful structure to web pages. These elements not only make your HTML code more readable and maintainable but also improve accessibility and search engine optimization (SEO). In this module, you will learn about key HTML5 semantic elements, their purposes, and how to use them effectively to create well-structured and accessible web content.</p>
+<h2 id="what-are-semantic-elements">What Are Semantic Elements?</h2>
+<h3 id="definition-of-semantic-elements">Definition of Semantic Elements</h3>
+<p>Semantic elements are HTML tags that clearly describe their meaning both to the browser and the developer. Unlike non-semantic elements such as <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>, which do not convey any information about their content, semantic elements provide a clear indication of the role that the enclosed content plays within the page structure.</p>
+<h3 id="importance-of-semantic-elements">Importance of Semantic Elements</h3>
+<ul>
+<li><strong>Improved Readability</strong>: Semantic elements make your code easier to read and understand, as they clearly define the structure and purpose of content.</li>
+<li><strong>Accessibility</strong>: Screen readers and other assistive technologies can better interpret the content and navigation of your page, improving accessibility for users with disabilities.</li>
+<li><strong>SEO Benefits</strong>: Search engines prioritize semantically structured content, which can improve your site’s search ranking and visibility.</li>
+</ul>
+<h2 id="key-html5-semantic-elements">Key HTML5 Semantic Elements</h2>
+<h3 id="header"><code>&lt;header&gt;</code></h3>
+<p>The <code>&lt;header&gt;</code> element represents the introductory content of a section or the entire page. It typically contains navigation links, logos, or headings.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-html">&lt;header&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+</code></pre>
+<h3 id="nav"><code>&lt;nav&gt;</code></h3>
+<p>The <code>&lt;nav&gt;</code> element is used to define a block of navigation links. It is commonly placed within the <code>&lt;header&gt;</code> or <code>&lt;footer&gt;</code>, but can appear anywhere on the page.</p>
+<h4 id="example_1">Example</h4>
+<pre><code class="language-html">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#services&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#portfolio&quot;&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+<h3 id="main"><code>&lt;main&gt;</code></h3>
+<p>The <code>&lt;main&gt;</code> element represents the dominant content of the <code>&lt;body&gt;</code>, excluding any content that is repeated across pages (such as sidebars or footers). Each page should only have one <code>&lt;main&gt;</code> element.</p>
+<h4 id="example_2">Example</h4>
+<pre><code class="language-html">&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Main Article Title&lt;/h2&gt;
+    &lt;p&gt;This is the main content of the page.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+</code></pre>
+<h3 id="article"><code>&lt;article&gt;</code></h3>
+<p>The <code>&lt;article&gt;</code> element represents a self-contained piece of content that could be independently distributed or reused, such as a blog post, news article, or forum post.</p>
+<h4 id="example_3">Example</h4>
+<pre><code class="language-html">&lt;article&gt;
+  &lt;h2&gt;Understanding HTML5 Semantic Elements&lt;/h2&gt;
+  &lt;p&gt;Semantic elements help structure content in a meaningful way...&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+<h3 id="section"><code>&lt;section&gt;</code></h3>
+<p>The <code>&lt;section&gt;</code> element groups related content together. It is often used within the <code>&lt;main&gt;</code> element to divide content into thematic sections, each typically containing a heading.</p>
+<h4 id="example_4">Example</h4>
+<pre><code class="language-html">&lt;section id=&quot;about&quot;&gt;
+  &lt;h2&gt;About Us&lt;/h2&gt;
+  &lt;p&gt;Our company specializes in web development...&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id=&quot;services&quot;&gt;
+  &lt;h2&gt;Our Services&lt;/h2&gt;
+  &lt;p&gt;We offer a wide range of web development services...&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="aside"><code>&lt;aside&gt;</code></h3>
+<p>The <code>&lt;aside&gt;</code> element represents content that is related to the main content but is not essential to its understanding, such as sidebars, pull quotes, or related links.</p>
+<h4 id="example_5">Example</h4>
+<pre><code class="language-html">&lt;aside&gt;
+  &lt;h3&gt;Related Articles&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#article1&quot;&gt;Article 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#article2&quot;&gt;Article 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+</code></pre>
+<h3 id="footer"><code>&lt;footer&gt;</code></h3>
+<p>The <code>&lt;footer&gt;</code> element typically contains information about the author, copyright information, or links to related documents. It is usually placed at the bottom of the page or within individual sections or articles.</p>
+<h4 id="example_6">Example</h4>
+<pre><code class="language-html">&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2024 My Website. All rights reserved.&lt;/p&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#privacy&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#terms&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/footer&gt;
+</code></pre>
+<h2 id="using-semantic-elements-effectively">Using Semantic Elements Effectively</h2>
+<h3 id="best-practices-for-semantic-elements">Best Practices for Semantic Elements</h3>
+<ul>
+<li><strong>Use Elements Appropriately</strong>: Ensure that each semantic element is used according to its intended purpose. For example, use <code>&lt;article&gt;</code> for independent content pieces and <code>&lt;section&gt;</code> for thematic groupings.</li>
+<li><strong>Structure Your HTML</strong>: Organize your HTML document hierarchically, with semantic elements reflecting the logical structure of the content.</li>
+<li><strong>Avoid Overuse</strong>: Don’t overuse semantic elements where they aren’t necessary. Use <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> for generic containers when no semantic meaning is required.</li>
+</ul>
+<h3 id="example-combining-semantic-elements">Example: Combining Semantic Elements</h3>
+<p>Here’s an example of a well-structured HTML document that uses semantic elements effectively:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Understanding HTML5 Semantic Elements&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;My Website&lt;/h1&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+      &lt;section id=&quot;introduction&quot;&gt;
+        &lt;h2&gt;Introduction&lt;/h2&gt;
+        &lt;p&gt;
+          This article will help you understand the importance of HTML5 semantic
+          elements...
+        &lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;article&gt;
+        &lt;h2&gt;What Are Semantic Elements?&lt;/h2&gt;
+        &lt;p&gt;
+          Semantic elements clearly describe their meaning in a human- and
+          machine-readable way...
+        &lt;/p&gt;
+      &lt;/article&gt;
+
+      &lt;section id=&quot;benefits&quot;&gt;
+        &lt;h2&gt;Benefits of Semantic Elements&lt;/h2&gt;
+        &lt;p&gt;
+          Using semantic elements improves accessibility, SEO, and code
+          readability...
+        &lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;aside&gt;
+        &lt;h3&gt;Related Topics&lt;/h3&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#seo&quot;&gt;SEO Best Practices&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#accessibility&quot;&gt;Web Accessibility&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/aside&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      &lt;p&gt;&amp;copy; 2024 My Website. All rights reserved.&lt;/p&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#privacy&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#terms&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>In this example, the page is structured using a variety of semantic elements, making the content clear, organized, and accessible.</p>
+<h2 id="practical-activity-structuring-a-webpage-with-semantic-elements">Practical Activity: Structuring a Webpage with Semantic Elements</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a well-structured webpage using HTML5 semantic elements. Focus on organizing the content in a meaningful way, improving readability and accessibility.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create an HTML file named <code>semantic-structure.html</code>.</li>
+<li>Organize the page content using semantic elements such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;footer&gt;</code>.</li>
+<li>Add content such as headings, paragraphs, and lists within these elements.</li>
+<li>Ensure that the page structure reflects the logical organization of the content.</li>
+<li>Test your page in a browser to ensure that the layout and structure are correct.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Use a consistent structure across your webpage to make it easier for users to navigate and for search engines to index.</li>
+<li>Validate your HTML to ensure that semantic elements are used correctly.</li>
+<li>Consider accessibility from the start by using semantic elements to create a clear, logical structure that is easy for assistive technologies to interpret.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_15/" class="btn btn-neutral float-left" title="Advanced HTML Elements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_17/" class="btn btn-neutral float-right" title="Forms and Inputs">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_15/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_17/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

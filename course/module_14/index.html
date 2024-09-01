@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_14/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Responsive Design Basics - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Responsive Design Basics";
+        var mkdocs_page_input_path = "course\\module_14.md";
+        var mkdocs_page_url = "/course/module_14/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Responsive Design Basics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-responsive-design">What is Responsive Design?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-importance-of-responsive-design">The Importance of Responsive Design</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-principles-of-responsive-design">Key Principles of Responsive Design</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introduction-to-media-queries">Introduction to Media Queries</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-media-queries">What Are Media Queries?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-syntax-of-media-queries">Basic Syntax of Media Queries</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-media-query">Example of a Media Query</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#common-media-query-breakpoints">Common Media Query Breakpoints</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-of-using-breakpoints">Example of Using Breakpoints</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practical-example-creating-a-responsive-layout">Practical Example: Creating a Responsive Layout</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#responsive-navigation-menu">Responsive Navigation Menu</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#responsive-grid-layout">Responsive Grid Layout</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practical-activity-applying-responsive-design">Practical Activity: Applying Responsive Design</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Responsive Design Basics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="responsive-design-basics">Responsive Design Basics</h1>
+<h2 id="overview">Overview</h2>
+<p>Responsive design is an approach to web design that ensures web pages look good and function well on all devices, from large desktop monitors to small mobile screens. In this module, you will learn the basics of responsive design, including how to use media queries to create flexible layouts that adapt to different screen sizes.</p>
+<h2 id="what-is-responsive-design">What is Responsive Design?</h2>
+<h3 id="the-importance-of-responsive-design">The Importance of Responsive Design</h3>
+<p>With the variety of devices and screen sizes used to access the web today, responsive design is essential. A responsive website provides a better user experience by automatically adjusting its layout and content to fit the device’s screen.</p>
+<h3 id="key-principles-of-responsive-design">Key Principles of Responsive Design</h3>
+<ul>
+<li><strong>Fluid Grids</strong>: Use relative units like percentages instead of fixed units like pixels to define the width of elements, allowing them to resize dynamically.</li>
+<li><strong>Flexible Images</strong>: Images should scale with the size of the screen, maintaining their aspect ratio.</li>
+<li><strong>Media Queries</strong>: CSS rules that apply styles based on the characteristics of the device, such as its width, height, or orientation.</li>
+</ul>
+<h2 id="introduction-to-media-queries">Introduction to Media Queries</h2>
+<h3 id="what-are-media-queries">What Are Media Queries?</h3>
+<p>Media queries are a feature of CSS that allow you to apply styles based on the characteristics of the user’s device. They are essential for creating responsive designs, as they enable you to change the layout, typography, and other design elements depending on the screen size.</p>
+<h3 id="basic-syntax-of-media-queries">Basic Syntax of Media Queries</h3>
+<p>A media query consists of a <code>@media</code> rule followed by the conditions (e.g., screen width) and the CSS rules that should apply if those conditions are met.</p>
+<h4 id="example-of-a-media-query">Example of a Media Query</h4>
+<pre><code class="language-css">/* Default styles */
+body {
+  font-size: 16px;
+  margin: 20px;
+}
+
+/* Media query for screens wider than 768px */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    margin: 40px;
+  }
+}
+
+/* Media query for screens wider than 1200px */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+    margin: 60px;
+  }
+}
+</code></pre>
+<p>In this example, the <code>body</code> element’s font size and margin are adjusted based on the screen width. Smaller screens use the default styles, while larger screens apply the styles defined in the media queries.</p>
+<h3 id="common-media-query-breakpoints">Common Media Query Breakpoints</h3>
+<p>Breakpoints are specific screen widths where you want the design to change. Here are some common breakpoints:</p>
+<ul>
+<li><strong>Small Devices (Mobile)</strong>: <code>min-width: 576px</code></li>
+<li><strong>Medium Devices (Tablets)</strong>: <code>min-width: 768px</code></li>
+<li><strong>Large Devices (Desktops)</strong>: <code>min-width: 992px</code></li>
+<li><strong>Extra Large Devices (Large Desktops)</strong>: <code>min-width: 1200px</code></li>
+</ul>
+<h3 id="example-of-using-breakpoints">Example of Using Breakpoints</h3>
+<pre><code class="language-css">/* Base styles for mobile devices */
+.container {
+  width: 100%;
+}
+
+/* Tablet and larger */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Desktop and larger */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+</code></pre>
+<p>In this example, the <code>.container</code> class changes its width based on the screen size, allowing the layout to adjust for different devices.</p>
+<h2 id="practical-example-creating-a-responsive-layout">Practical Example: Creating a Responsive Layout</h2>
+<h3 id="responsive-navigation-menu">Responsive Navigation Menu</h3>
+<p>One common use of media queries is to create a responsive navigation menu that adapts from a horizontal layout on larger screens to a vertical or dropdown layout on smaller screens.</p>
+<pre><code class="language-css">/* Base styles for mobile devices */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar a {
+  padding: 10px;
+  text-align: center;
+  display: block;
+}
+
+/* Desktop and larger */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .navbar a {
+    padding: 15px 30px;
+    text-align: left;
+  }
+}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;navbar&quot;&gt;
+  &lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;#services&quot;&gt;Services&lt;/a&gt;
+  &lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;
+  &lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<p>In this example, the navigation menu is displayed as a vertical list on smaller screens and as a horizontal bar on larger screens.</p>
+<h3 id="responsive-grid-layout">Responsive Grid Layout</h3>
+<p>You can also use media queries to create responsive grid layouts that adjust the number of columns based on the screen size.</p>
+<pre><code class="language-css">/* Base styles for mobile devices */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+/* Tablet and larger */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop and larger */
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;grid-container&quot;&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Item 1&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Item 2&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Item 3&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Item 4&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Item 5&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Item 6&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>In this example, the grid layout adjusts from one column on mobile devices to three columns on larger screens, providing a flexible and responsive layout.</p>
+<h2 id="practical-activity-applying-responsive-design">Practical Activity: Applying Responsive Design</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a responsive webpage that adapts to different screen sizes using media queries. Practice applying responsive design principles to ensure your webpage looks good on mobile devices, tablets, and desktops.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create an HTML file named <code>responsive-design.html</code> and a CSS file named <code>responsive-styles.css</code>.</li>
+<li>Use media queries to create a responsive layout with the following components:</li>
+<li>A responsive navigation menu that changes from vertical to horizontal based on screen size.</li>
+<li>A grid layout that adjusts the number of columns based on the screen width.</li>
+<li>Responsive typography that scales with the size of the screen.</li>
+<li>Test your webpage in different screen sizes using your browser’s developer tools or by resizing the browser window.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Start with a mobile-first approach by designing for smaller screens first, then adding media queries for larger screens.</li>
+<li>Use percentage-based widths and <code>flexbox</code> or <code>grid</code> layouts to create fluid designs that adapt to different screen sizes.</li>
+<li>Test your designs on actual devices, if possible, to ensure they work well across a variety of screens.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_13/" class="btn btn-neutral float-left" title="Layout Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_15/" class="btn btn-neutral float-right" title="Advanced HTML Elements">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_13/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_15/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

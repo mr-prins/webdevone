@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_07/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>HTML Forms (Intro Level) - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "HTML Forms (Intro Level)";
+        var mkdocs_page_input_path = "course\\module_07.md";
+        var mkdocs_page_url = "/course/module_07/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">HTML Forms (Intro Level)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-simple-form">Creating a Simple Form</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-form-tag">The &lt;form&gt; Tag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#text-fields">Text Fields</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#password-fields">Password Fields</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#radio-buttons">Radio Buttons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkboxes">Checkboxes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#submit-button">Submit Button</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#putting-it-all-together">Putting It All Together</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practice-activity-creating-your-own-form">Practice Activity: Creating Your Own Form</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">HTML Forms (Intro Level)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="html-forms-intro-level">HTML Forms (Intro Level)</h1>
+<h2 id="overview">Overview</h2>
+<p>Forms are a fundamental part of web development, allowing users to interact with a webpage by submitting data. In this module, you will learn how to create a simple HTML form. We’ll cover basic form elements like text fields, buttons, and checkboxes, focusing on form structure and design. Please note that this module will not delve into backend implementation, as the focus is on the front-end structure of forms.</p>
+<h2 id="creating-a-simple-form">Creating a Simple Form</h2>
+<h3 id="the-form-tag">The <code>&lt;form&gt;</code> Tag</h3>
+<p>A form in HTML is created using the <code>&lt;form&gt;</code> tag. This tag acts as a container for various input elements like text fields, checkboxes, and buttons. Although this module focuses on the front-end, it’s worth noting that forms typically send data to a server when submitted.</p>
+<pre><code class="language-html">&lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;
+  &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li><strong><code>action</code> Attribute</strong>: Specifies the URL to which the form data will be sent. For now, we’ll use a placeholder value.</li>
+<li><strong><code>method</code> Attribute</strong>: Defines the HTTP method (<code>GET</code> or <code>POST</code>) used when sending form data.</li>
+</ul>
+<h3 id="text-fields">Text Fields</h3>
+<p>Text fields allow users to enter text. They are created using the <code>&lt;input&gt;</code> tag with the <code>type</code> attribute set to <code>text</code>.</p>
+<pre><code class="language-html">&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; /&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;label&gt;</code> Tag</strong>: Associates a label with a form element, improving accessibility.</li>
+<li><strong><code>&lt;input type="text"&gt;</code></strong>: Creates a single-line text input field.</li>
+<li><strong><code>id</code> Attribute</strong>: Provides a unique identifier for the input, allowing it to be linked to a <code>&lt;label&gt;</code>.</li>
+</ul>
+<h3 id="password-fields">Password Fields</h3>
+<p>Password fields work similarly to text fields but obscure the input, typically displaying dots instead of the actual characters.</p>
+<pre><code class="language-html">&lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+&lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; /&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;input type="password"&gt;</code></strong>: Creates a password input field.</li>
+</ul>
+<h3 id="radio-buttons">Radio Buttons</h3>
+<p>Radio buttons allow users to select one option from a set of choices. Each radio button in a group should share the same <code>name</code> attribute.</p>
+<pre><code class="language-html">&lt;p&gt;Gender:&lt;/p&gt;
+&lt;input type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; value=&quot;male&quot; /&gt;
+&lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;&lt;br /&gt;
+&lt;input type=&quot;radio&quot; id=&quot;female&quot; name=&quot;gender&quot; value=&quot;female&quot; /&gt;
+&lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;&lt;br /&gt;
+&lt;input type=&quot;radio&quot; id=&quot;other&quot; name=&quot;gender&quot; value=&quot;other&quot; /&gt;
+&lt;label for=&quot;other&quot;&gt;Other&lt;/label&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;input type="radio"&gt;</code></strong>: Creates a radio button.</li>
+<li><strong><code>name</code> Attribute</strong>: Groups radio buttons together, so only one can be selected at a time.</li>
+</ul>
+<h3 id="checkboxes">Checkboxes</h3>
+<p>Checkboxes allow users to select multiple options from a set of choices. Each checkbox should have a unique <code>id</code>.</p>
+<pre><code class="language-html">&lt;p&gt;Select your hobbies:&lt;/p&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;sports&quot; name=&quot;hobby&quot; value=&quot;sports&quot; /&gt;
+&lt;label for=&quot;sports&quot;&gt;Sports&lt;/label&gt;&lt;br /&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;music&quot; name=&quot;hobby&quot; value=&quot;music&quot; /&gt;
+&lt;label for=&quot;music&quot;&gt;Music&lt;/label&gt;&lt;br /&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;reading&quot; name=&quot;hobby&quot; value=&quot;reading&quot; /&gt;
+&lt;label for=&quot;reading&quot;&gt;Reading&lt;/label&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;input type="checkbox"&gt;</code></strong>: Creates a checkbox.</li>
+<li><strong><code>value</code> Attribute</strong>: Assigns a value to the checkbox, which will be submitted if the checkbox is selected.</li>
+</ul>
+<h3 id="submit-button">Submit Button</h3>
+<p>The submit button sends the form data to the server. It is created using the <code>&lt;input&gt;</code> tag with the <code>type</code> attribute set to <code>submit</code>.</p>
+<pre><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;input type="submit"&gt;</code></strong>: Creates a submit button.</li>
+<li><strong><code>value</code> Attribute</strong>: Sets the text displayed on the button.</li>
+</ul>
+<h3 id="putting-it-all-together">Putting It All Together</h3>
+<p>Here’s an example of a complete, simple form that incorporates all the elements discussed:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Simple Form Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Registration Form&lt;/h1&gt;
+
+    &lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;
+      &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+
+      &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+      &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+
+      &lt;p&gt;Gender:&lt;/p&gt;
+      &lt;input type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; value=&quot;male&quot; /&gt;
+      &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;&lt;br /&gt;
+      &lt;input type=&quot;radio&quot; id=&quot;female&quot; name=&quot;gender&quot; value=&quot;female&quot; /&gt;
+      &lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;&lt;br /&gt;
+      &lt;input type=&quot;radio&quot; id=&quot;other&quot; name=&quot;gender&quot; value=&quot;other&quot; /&gt;
+      &lt;label for=&quot;other&quot;&gt;Other&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+
+      &lt;p&gt;Select your hobbies:&lt;/p&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;sports&quot; name=&quot;hobby&quot; value=&quot;sports&quot; /&gt;
+      &lt;label for=&quot;sports&quot;&gt;Sports&lt;/label&gt;&lt;br /&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;music&quot; name=&quot;hobby&quot; value=&quot;music&quot; /&gt;
+      &lt;label for=&quot;music&quot;&gt;Music&lt;/label&gt;&lt;br /&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;reading&quot; name=&quot;hobby&quot; value=&quot;reading&quot; /&gt;
+      &lt;label for=&quot;reading&quot;&gt;Reading&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+
+      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="practice-activity-creating-your-own-form">Practice Activity: Creating Your Own Form</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a simple form that includes text fields, password fields, radio buttons, checkboxes, and a submit button. Customize the form to collect information relevant to a specific purpose, such as a sign-up or feedback form.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create a new HTML file named <code>form.html</code>.</li>
+<li>Design a form that includes at least:</li>
+<li>Two text fields</li>
+<li>One password field</li>
+<li>A set of radio buttons</li>
+<li>A set of checkboxes</li>
+<li>A submit button</li>
+<li>Add labels to each form element to ensure the form is accessible.</li>
+<li>Test the form in a browser to ensure all elements are displayed correctly and the submit button works as expected.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Use meaningful names and values for your form elements to make the form data clear.</li>
+<li>Ensure that each input element has an associated <code>&lt;label&gt;</code> to improve usability and accessibility.</li>
+<li>Although backend processing is not covered in this module, understand that form data is usually sent to a server for processing.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_06/" class="btn btn-neutral float-left" title="Images and Multimedia"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_08/" class="btn btn-neutral float-right" title="Best Practices in HTML I">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_06/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_08/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

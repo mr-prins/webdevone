@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_17/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Forms and Inputs - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Forms and Inputs";
+        var mkdocs_page_input_path = "course\\module_17.md";
+        var mkdocs_page_url = "/course/module_17/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Forms and Inputs</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#form-elements">Form Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-form-element">The &lt;form&gt; Element</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-basic-form">Example of a Basic Form</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#input-elements">Input Elements</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-common-input-fields">Example of Common Input Fields</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#labeling-inputs">Labeling Inputs</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-using-label-with-inputs">Example of Using &lt;label&gt; with Inputs</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#grouping-inputs">Grouping Inputs</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-grouping-inputs">Example of Grouping Inputs</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#form-attributes">Form Attributes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#required-fields">Required Fields</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-required-fields">Example of Required Fields</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#placeholder-text">Placeholder Text</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-placeholder-text">Example of Placeholder Text</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#default-values">Default Values</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-default-values">Example of Default Values</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#form-validation-attributes">Form Validation Attributes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-validation-attributes">Example of Validation Attributes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#action-and-method">Action and Method</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-action-and-method">Example of Action and Method</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#radio-buttons-and-checkboxes">Radio Buttons and Checkboxes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-radio-buttons">Example of Radio Buttons</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-checkboxes">Example of Checkboxes</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#form-submission">Form Submission</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-submit-button">The Submit Button</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-submit-button">Example of a Submit Button</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reset-button">Reset Button</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-reset-button">Example of a Reset Button</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practical-activity-building-a-form">Practical Activity: Building a Form</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Forms and Inputs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="forms-and-inputs">Forms and Inputs</h1>
+<h2 id="overview">Overview</h2>
+<p>Forms are essential for gathering user input on the web, whether it's for signing up for a newsletter, submitting feedback, or making a purchase. In this module, you will learn how to create and structure forms using HTML, explore different types of input fields, and understand how to use form attributes to control behavior and validation.</p>
+<h2 id="form-elements">Form Elements</h2>
+<h3 id="the-form-element">The <code>&lt;form&gt;</code> Element</h3>
+<p>The <code>&lt;form&gt;</code> element is the container for all input elements in an HTML form. It defines the area on the page where the user inputs data.</p>
+<h4 id="example-of-a-basic-form">Example of a Basic Form</h4>
+<pre><code class="language-html">&lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;
+  &lt;!-- Form fields go here --&gt;
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li><strong><code>action</code> Attribute</strong>: Specifies where to send the form data when the form is submitted.</li>
+<li><strong><code>method</code> Attribute</strong>: Defines the HTTP method to be used when submitting the form (typically <code>post</code> or <code>get</code>).</li>
+</ul>
+<h3 id="input-elements">Input Elements</h3>
+<p>HTML provides a variety of input types that allow users to enter different kinds of data. Each input type is defined using the <code>&lt;input&gt;</code> tag with a specific <code>type</code> attribute.</p>
+<h4 id="example-of-common-input-fields">Example of Common Input Fields</h4>
+<pre><code class="language-html">&lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;
+  &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; required /&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+  &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required /&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+  &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; required /&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;label for=&quot;age&quot;&gt;Age:&lt;/label&gt;
+  &lt;input type=&quot;number&quot; id=&quot;age&quot; name=&quot;age&quot; min=&quot;1&quot; max=&quot;100&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;label for=&quot;dob&quot;&gt;Date of Birth:&lt;/label&gt;
+  &lt;input type=&quot;date&quot; id=&quot;dob&quot; name=&quot;dob&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;label for=&quot;color&quot;&gt;Favorite Color:&lt;/label&gt;
+  &lt;input type=&quot;color&quot; id=&quot;color&quot; name=&quot;color&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li><strong><code>type="text"</code></strong>: A standard text input field.</li>
+<li><strong><code>type="email"</code></strong>: An input field for email addresses, with built-in validation.</li>
+<li><strong><code>type="password"</code></strong>: A password input field that masks the characters.</li>
+<li><strong><code>type="number"</code></strong>: An input field for numeric values, with <code>min</code> and <code>max</code> attributes.</li>
+<li><strong><code>type="date"</code></strong>: A date picker input field.</li>
+<li><strong><code>type="color"</code></strong>: An input field that allows users to select a color.</li>
+</ul>
+<h3 id="labeling-inputs">Labeling Inputs</h3>
+<p>Using the <code>&lt;label&gt;</code> element improves accessibility by associating text labels with their corresponding input fields. This ensures that users, especially those using screen readers, can easily understand the purpose of each input field.</p>
+<h4 id="example-of-using-label-with-inputs">Example of Using <code>&lt;label&gt;</code> with Inputs</h4>
+<pre><code class="language-html">&lt;label for=&quot;username&quot;&gt;Username:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; /&gt;
+</code></pre>
+<ul>
+<li><strong><code>for</code> Attribute</strong>: Links the label to the input field by matching the <code>id</code> of the input.</li>
+</ul>
+<h3 id="grouping-inputs">Grouping Inputs</h3>
+<p>You can group related input elements using the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> elements, which help organize the form and make it more accessible.</p>
+<h4 id="example-of-grouping-inputs">Example of Grouping Inputs</h4>
+<pre><code class="language-html">&lt;fieldset&gt;
+  &lt;legend&gt;Personal Information&lt;/legend&gt;
+
+  &lt;label for=&quot;fname&quot;&gt;First Name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+
+  &lt;label for=&quot;lname&quot;&gt;Last Name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;fieldset&gt;</code></strong>: Groups related inputs together.</li>
+<li><strong><code>&lt;legend&gt;</code></strong>: Provides a caption for the fieldset, describing the group of inputs.</li>
+</ul>
+<h2 id="form-attributes">Form Attributes</h2>
+<h3 id="required-fields">Required Fields</h3>
+<p>The <code>required</code> attribute can be added to input fields to make them mandatory. The form will not submit until all required fields are filled out.</p>
+<h4 id="example-of-required-fields">Example of Required Fields</h4>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; name=&quot;username&quot; required /&gt;
+</code></pre>
+<h3 id="placeholder-text">Placeholder Text</h3>
+<p>The <code>placeholder</code> attribute provides a short hint that describes the expected value of an input field, which disappears once the user starts typing.</p>
+<h4 id="example-of-placeholder-text">Example of Placeholder Text</h4>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search...&quot; /&gt;
+</code></pre>
+<h3 id="default-values">Default Values</h3>
+<p>The <code>value</code> attribute sets the initial value of an input field.</p>
+<h4 id="example-of-default-values">Example of Default Values</h4>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; name=&quot;country&quot; value=&quot;USA&quot; /&gt;
+</code></pre>
+<h3 id="form-validation-attributes">Form Validation Attributes</h3>
+<p>HTML5 includes built-in validation attributes that allow you to specify constraints on input fields.</p>
+<h4 id="example-of-validation-attributes">Example of Validation Attributes</h4>
+<pre><code class="language-html">&lt;input
+  type=&quot;email&quot;
+  name=&quot;useremail&quot;
+  required
+  pattern=&quot;[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$&quot;
+  title=&quot;Please enter a valid email address&quot;
+/&gt;
+</code></pre>
+<ul>
+<li><strong><code>pattern</code></strong>: Specifies a regular expression that the input's value must match.</li>
+<li><strong><code>title</code></strong>: Provides a custom error message for invalid input.</li>
+</ul>
+<h3 id="action-and-method">Action and Method</h3>
+<p>The <code>action</code> attribute defines where the form data should be sent, and the <code>method</code> attribute specifies how the data should be sent.</p>
+<h4 id="example-of-action-and-method">Example of Action and Method</h4>
+<pre><code class="language-html">&lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;
+  &lt;!-- Form fields go here --&gt;
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li><strong><code>action</code></strong>: The URL where the form data will be sent.</li>
+<li><strong><code>method</code></strong>: Typically <code>post</code> (for submitting data securely) or <code>get</code> (for appending data to the URL).</li>
+</ul>
+<h3 id="radio-buttons-and-checkboxes">Radio Buttons and Checkboxes</h3>
+<p>Radio buttons and checkboxes allow users to select options. Radio buttons are used when only one selection is allowed, while checkboxes allow multiple selections.</p>
+<h4 id="example-of-radio-buttons">Example of Radio Buttons</h4>
+<pre><code class="language-html">&lt;p&gt;Gender:&lt;/p&gt;
+&lt;input type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; value=&quot;male&quot; /&gt;
+&lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;&lt;br /&gt;
+&lt;input type=&quot;radio&quot; id=&quot;female&quot; name=&quot;gender&quot; value=&quot;female&quot; /&gt;
+&lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;&lt;br /&gt;
+&lt;input type=&quot;radio&quot; id=&quot;other&quot; name=&quot;gender&quot; value=&quot;other&quot; /&gt;
+&lt;label for=&quot;other&quot;&gt;Other&lt;/label&gt;
+</code></pre>
+<h4 id="example-of-checkboxes">Example of Checkboxes</h4>
+<pre><code class="language-html">&lt;p&gt;Select your hobbies:&lt;/p&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;sports&quot; name=&quot;hobby&quot; value=&quot;sports&quot; /&gt;
+&lt;label for=&quot;sports&quot;&gt;Sports&lt;/label&gt;&lt;br /&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;music&quot; name=&quot;hobby&quot; value=&quot;music&quot; /&gt;
+&lt;label for=&quot;music&quot;&gt;Music&lt;/label&gt;&lt;br /&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;reading&quot; name=&quot;hobby&quot; value=&quot;reading&quot; /&gt;
+&lt;label for=&quot;reading&quot;&gt;Reading&lt;/label&gt;
+</code></pre>
+<h2 id="form-submission">Form Submission</h2>
+<h3 id="the-submit-button">The Submit Button</h3>
+<p>The submit button is used to send the form data to the server. It is created using the <code>&lt;input&gt;</code> or <code>&lt;button&gt;</code> tag with <code>type="submit"</code>.</p>
+<h4 id="example-of-a-submit-button">Example of a Submit Button</h4>
+<pre><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+</code></pre>
+<p>Alternatively, you can use the <code>&lt;button&gt;</code> element:</p>
+<pre><code class="language-html">&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+</code></pre>
+<h3 id="reset-button">Reset Button</h3>
+<p>The reset button clears all the input fields in the form, returning them to their default values.</p>
+<h4 id="example-of-a-reset-button">Example of a Reset Button</h4>
+<pre><code class="language-html">&lt;input type=&quot;reset&quot; value=&quot;Reset&quot; /&gt;
+</code></pre>
+<h2 id="practical-activity-building-a-form">Practical Activity: Building a Form</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a complete form that collects user information, including text inputs, radio buttons, checkboxes, and a submit button. Apply appropriate form attributes to ensure proper validation and usability.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create an HTML file named <code>user-form.html</code>.</li>
+<li>Design a form that includes:</li>
+<li>Text inputs for name, email, and password.</li>
+<li>A date input for the user's birthdate.</li>
+<li>Radio buttons for gender selection.</li>
+<li>Checkboxes for selecting hobbies.</li>
+<li>A submit button to send the form data.</li>
+<li>Use labels, fieldsets, and legends to organize the form fields.</li>
+<li>Apply validation attributes like <code>required</code>, <code>pattern</code>, and <code>min</code>/<code>max</code> where appropriate.</li>
+<li>Test the form in a browser to ensure all fields are working correctly and that validation is functioning as expected.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Use the <code>required</code> attribute to ensure essential fields are filled out before submission.</li>
+<li>Provide meaningful placeholder text to guide the user on what to input.</li>
+<li>Group related fields with <code>&lt;fieldset&gt;</code> and use <code>&lt;legend&gt;</code> to provide context.</li>
+<li>Test the form's behavior when submitting invalid data to see how the validation works.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_16/" class="btn btn-neutral float-left" title="HTML5 Semantic Elements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_18/" class="btn btn-neutral float-right" title="Linking and Navigation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_16/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_18/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

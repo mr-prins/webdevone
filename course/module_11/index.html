@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_11/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Basic CSS Properties - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Basic CSS Properties";
+        var mkdocs_page_input_path = "course\\module_11.md";
+        var mkdocs_page_url = "/course/module_11/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Basic CSS Properties</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#text-styling">Text Styling</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#font-size">Font Size</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#font-color">Font Color</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_1">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#font-family">Font Family</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_2">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#font-weight">Font Weight</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_3">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#text-alignment">Text Alignment</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_4">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#color-and-backgrounds">Color and Backgrounds</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#background-color">Background Color</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_5">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#background-image">Background Image</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_6">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#background-repeat">Background Repeat</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_7">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#background-position">Background Position</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_8">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#borders-and-spacing">Borders and Spacing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#borders">Borders</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_9">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#border-radius">Border Radius</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_10">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#margin">Margin</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_11">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#padding">Padding</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_12">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-applying-basic-css-properties">Example: Applying Basic CSS Properties</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practice-activity-styling-a-webpage-with-basic-css-properties">Practice Activity: Styling a Webpage with Basic CSS Properties</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Basic CSS Properties</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="basic-css-properties">Basic CSS Properties</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, we will explore some of the most commonly used CSS properties that allow you to control the appearance of text, colors, backgrounds, borders, and spacing in your web pages. By mastering these basic properties, you’ll be able to create more visually appealing and user-friendly websites.</p>
+<h2 id="text-styling">Text Styling</h2>
+<h3 id="font-size">Font Size</h3>
+<p>The <code>font-size</code> property controls the size of the text. You can set the size using different units such as pixels (<code>px</code>), em units (<code>em</code>), rem units (<code>rem</code>), or percentages (<code>%</code>).</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-css">p {
+  font-size: 16px;
+}
+</code></pre>
+<ul>
+<li><strong><code>font-size: 16px;</code></strong>: Sets the font size to 16 pixels.</li>
+</ul>
+<h3 id="font-color">Font Color</h3>
+<p>The <code>color</code> property sets the color of the text. Colors can be specified using named colors, HEX values, RGB values, or HSL values.</p>
+<h4 id="example_1">Example</h4>
+<pre><code class="language-css">h1 {
+  color: navy;
+}
+</code></pre>
+<ul>
+<li><strong><code>color: navy;</code></strong>: Sets the text color to navy.</li>
+</ul>
+<h3 id="font-family">Font Family</h3>
+<p>The <code>font-family</code> property specifies the font type. You can provide a list of fonts, and the browser will use the first available one. Always include a generic family as a fallback (e.g., <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>).</p>
+<h4 id="example_2">Example</h4>
+<pre><code class="language-css">body {
+  font-family: Arial, sans-serif;
+}
+</code></pre>
+<ul>
+<li><strong><code>font-family: Arial, sans-serif;</code></strong>: Sets the text font to Arial, with a fallback to a sans-serif font.</li>
+</ul>
+<h3 id="font-weight">Font Weight</h3>
+<p>The <code>font-weight</code> property controls the boldness of the text. You can use keywords like <code>normal</code> and <code>bold</code>, or numeric values ranging from 100 to 900.</p>
+<h4 id="example_3">Example</h4>
+<pre><code class="language-css">h2 {
+  font-weight: bold;
+}
+</code></pre>
+<ul>
+<li><strong><code>font-weight: bold;</code></strong>: Makes the text bold.</li>
+</ul>
+<h3 id="text-alignment">Text Alignment</h3>
+<p>The <code>text-align</code> property sets the horizontal alignment of the text within its container. Common values include <code>left</code>, <code>right</code>, <code>center</code>, and <code>justify</code>.</p>
+<h4 id="example_4">Example</h4>
+<pre><code class="language-css">p {
+  text-align: center;
+}
+</code></pre>
+<ul>
+<li><strong><code>text-align: center;</code></strong>: Centers the text within the paragraph.</li>
+</ul>
+<h2 id="color-and-backgrounds">Color and Backgrounds</h2>
+<h3 id="background-color">Background Color</h3>
+<p>The <code>background-color</code> property sets the background color of an element. Like the <code>color</code> property, it accepts named colors, HEX values, RGB values, and HSL values.</p>
+<h4 id="example_5">Example</h4>
+<pre><code class="language-css">div {
+  background-color: lightblue;
+}
+</code></pre>
+<ul>
+<li><strong><code>background-color: lightblue;</code></strong>: Sets the background color to light blue.</li>
+</ul>
+<h3 id="background-image">Background Image</h3>
+<p>The <code>background-image</code> property sets an image as the background of an element. The image can be repeated by default, or you can control its repetition and position.</p>
+<h4 id="example_6">Example</h4>
+<pre><code class="language-css">body {
+  background-image: url(&quot;background.jpg&quot;);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</code></pre>
+<ul>
+<li><strong><code>background-image: url('background.jpg');</code></strong>: Sets the background image.</li>
+<li><strong><code>background-repeat: no-repeat;</code></strong>: Prevents the image from repeating.</li>
+<li><strong><code>background-size: cover;</code></strong>: Scales the image to cover the entire background.</li>
+</ul>
+<h3 id="background-repeat">Background Repeat</h3>
+<p>The <code>background-repeat</code> property controls whether and how a background image repeats. Possible values are <code>repeat</code>, <code>no-repeat</code>, <code>repeat-x</code>, and <code>repeat-y</code>.</p>
+<h4 id="example_7">Example</h4>
+<pre><code class="language-css">div {
+  background-image: url(&quot;pattern.png&quot;);
+  background-repeat: repeat-x;
+}
+</code></pre>
+<ul>
+<li><strong><code>background-repeat: repeat-x;</code></strong>: Repeats the background image horizontally.</li>
+</ul>
+<h3 id="background-position">Background Position</h3>
+<p>The <code>background-position</code> property sets the initial position of the background image. It can take values like <code>left</code>, <code>right</code>, <code>center</code>, or coordinates in pixels or percentages.</p>
+<h4 id="example_8">Example</h4>
+<pre><code class="language-css">header {
+  background-image: url(&quot;banner.jpg&quot;);
+  background-position: center top;
+}
+</code></pre>
+<ul>
+<li><strong><code>background-position: center top;</code></strong>: Positions the background image at the top center of the header.</li>
+</ul>
+<h2 id="borders-and-spacing">Borders and Spacing</h2>
+<h3 id="borders">Borders</h3>
+<p>The <code>border</code> property sets the border around an element. You can define the border’s width, style, and color in a single line.</p>
+<h4 id="example_9">Example</h4>
+<pre><code class="language-css">p {
+  border: 2px solid black;
+}
+</code></pre>
+<ul>
+<li><strong><code>border: 2px solid black;</code></strong>: Adds a solid black border with a width of 2 pixels.</li>
+</ul>
+<h3 id="border-radius">Border Radius</h3>
+<p>The <code>border-radius</code> property rounds the corners of an element’s border. You can set it for all corners or specify each corner individually.</p>
+<h4 id="example_10">Example</h4>
+<pre><code class="language-css">button {
+  border-radius: 10px;
+}
+</code></pre>
+<ul>
+<li><strong><code>border-radius: 10px;</code></strong>: Rounds all corners of the button with a radius of 10 pixels.</li>
+</ul>
+<h3 id="margin">Margin</h3>
+<p>The <code>margin</code> property controls the space outside an element’s border. You can set individual margins for each side or use shorthand to set all sides at once.</p>
+<h4 id="example_11">Example</h4>
+<pre><code class="language-css">div {
+  margin: 20px;
+}
+</code></pre>
+<ul>
+<li><strong><code>margin: 20px;</code></strong>: Sets a 20-pixel margin on all sides of the <code>div</code>.</li>
+</ul>
+<h3 id="padding">Padding</h3>
+<p>The <code>padding</code> property controls the space inside an element’s border, between the border and the content. Like margins, you can set individual paddings or use shorthand.</p>
+<h4 id="example_12">Example</h4>
+<pre><code class="language-css">section {
+  padding: 15px;
+}
+</code></pre>
+<ul>
+<li><strong><code>padding: 15px;</code></strong>: Adds 15 pixels of padding on all sides of the <code>section</code>.</li>
+</ul>
+<h3 id="example-applying-basic-css-properties">Example: Applying Basic CSS Properties</h3>
+<p>Here’s how you might use these properties together in a single stylesheet:</p>
+<pre><code class="language-css">body {
+  font-family: &quot;Verdana&quot;, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #008cba;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f6b;
+}
+</code></pre>
+<p>In this example, the <code>body</code>, <code>h1</code>, <code>p</code>, and <code>button</code> elements are styled using the basic CSS properties discussed above.</p>
+<h2 id="practice-activity-styling-a-webpage-with-basic-css-properties">Practice Activity: Styling a Webpage with Basic CSS Properties</h2>
+<h3 id="objective">Objective</h3>
+<p>Use basic CSS properties to style a simple HTML webpage, focusing on text styling, color and backgrounds, and borders and spacing.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create an HTML file named <code>basic-styling.html</code> with content that includes headings, paragraphs, and buttons.</li>
+<li>Create a linked CSS file named <code>basic-styles.css</code>.</li>
+<li>Apply CSS properties to:</li>
+<li>Style the text (font size, color, alignment).</li>
+<li>Set background colors and images for different sections.</li>
+<li>Add borders, padding, and margins to elements.</li>
+<li>Use border-radius to round corners.</li>
+<li>Test your styled webpage in a browser to see the effects of the CSS properties.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Experiment with different values for properties like <code>margin</code>, <code>padding</code>, and <code>border-radius</code> to understand their impact.</li>
+<li>Use color values that contrast well with the background to ensure readability.</li>
+<li>Remember that you can combine multiple CSS properties in a single rule to style an element comprehensively.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_10/" class="btn btn-neutral float-left" title="Applying CSS to HTML"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_12/" class="btn btn-neutral float-right" title="The Box Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_10/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_12/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

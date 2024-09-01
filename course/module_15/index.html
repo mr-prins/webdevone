@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_15/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Advanced HTML Elements - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Advanced HTML Elements";
+        var mkdocs_page_input_path = "course\\module_15.md";
+        var mkdocs_page_url = "/course/module_15/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Advanced HTML Elements</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-and-using-tables">Creating and Using Tables</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#introduction-to-tables">Introduction to Tables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-table-structure">Basic Table Structure</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-simple-table">Example of a Simple Table</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adding-borders-and-styling">Adding Borders and Styling</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-styled-table">Example of a Styled Table</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#spanning-rows-and-columns">Spanning Rows and Columns</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-a-table-with-merged-cells">Example of a Table with Merged Cells</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#accessibility-considerations">Accessibility Considerations</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-an-accessible-table">Example of an Accessible Table</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#block-vs-inline-elements">Block vs. Inline Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#understanding-block-level-elements">Understanding Block-Level Elements</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#common-block-level-elements">Common Block-Level Elements</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-block-level-elements">Example of Block-Level Elements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#understanding-inline-elements">Understanding Inline Elements</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#common-inline-elements">Common Inline Elements</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-inline-elements">Example of Inline Elements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#differences-and-use-cases">Differences and Use Cases</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mixing-block-and-inline-elements">Mixing Block and Inline Elements</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-proper-nesting">Example of Proper Nesting</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-improper-nesting-should-be-avoided">Example of Improper Nesting (Should Be Avoided)</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practical-activity-working-with-advanced-html-elements">Practical Activity: Working with Advanced HTML Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Advanced HTML Elements</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="advanced-html-elements">Advanced HTML Elements</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, you will explore some of the more advanced HTML elements that are used to create complex and structured content on the web. These elements include tables for displaying tabular data, and a deeper understanding of block-level versus inline elements. By the end of this module, you will be able to create well-structured tables and understand the significance of block and inline elements in web design.</p>
+<h2 id="creating-and-using-tables">Creating and Using Tables</h2>
+<h3 id="introduction-to-tables">Introduction to Tables</h3>
+<p>Tables are used to display data in a grid format, with rows and columns. Although tables should not be used for layout purposes, they are essential for presenting tabular data in a clear and organized manner.</p>
+<h3 id="basic-table-structure">Basic Table Structure</h3>
+<p>A basic HTML table is created using the <code>&lt;table&gt;</code> tag, with rows defined by <code>&lt;tr&gt;</code>, headers by <code>&lt;th&gt;</code>, and data cells by <code>&lt;td&gt;</code>.</p>
+<h4 id="example-of-a-simple-table">Example of a Simple Table</h4>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;th&gt;Header 3&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 1&lt;/td&gt;
+    &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;td&gt;Data 3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 4&lt;/td&gt;
+    &lt;td&gt;Data 5&lt;/td&gt;
+    &lt;td&gt;Data 6&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;table&gt;</code></strong>: Defines the table structure.</li>
+<li><strong><code>&lt;tr&gt;</code></strong>: Defines a row in the table.</li>
+<li><strong><code>&lt;th&gt;</code></strong>: Defines a header cell, which is bold and centered by default.</li>
+<li><strong><code>&lt;td&gt;</code></strong>: Defines a standard data cell.</li>
+</ul>
+<h3 id="adding-borders-and-styling">Adding Borders and Styling</h3>
+<p>Tables can be styled using CSS to improve their appearance and readability. For instance, you can add borders, padding, and background colors.</p>
+<h4 id="example-of-a-styled-table">Example of a Styled Table</h4>
+<pre><code class="language-css">table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+</code></pre>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Product&lt;/th&gt;
+    &lt;th&gt;Price&lt;/th&gt;
+    &lt;th&gt;Quantity&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Apple&lt;/td&gt;
+    &lt;td&gt;$1.00&lt;/td&gt;
+    &lt;td&gt;10&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Orange&lt;/td&gt;
+    &lt;td&gt;$0.80&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<p>In this example, the table is styled with a border, padding, and a background color for the header cells.</p>
+<h3 id="spanning-rows-and-columns">Spanning Rows and Columns</h3>
+<p>You can merge cells across multiple rows or columns using the <code>rowspan</code> and <code>colspan</code> attributes.</p>
+<h4 id="example-of-a-table-with-merged-cells">Example of a Table with Merged Cells</h4>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Product&lt;/th&gt;
+    &lt;th colspan=&quot;2&quot;&gt;Details&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Apple&lt;/td&gt;
+    &lt;td&gt;Price: $1.00&lt;/td&gt;
+    &lt;td&gt;Quantity: 10&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Orange&lt;/td&gt;
+    &lt;td colspan=&quot;2&quot;&gt;Price: $0.80, Quantity: 20&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<ul>
+<li><strong><code>colspan="2"</code></strong>: Merges two columns into one.</li>
+<li><strong><code>rowspan="2"</code></strong>: Merges two rows into one (not shown in this example).</li>
+</ul>
+<h3 id="accessibility-considerations">Accessibility Considerations</h3>
+<p>When using tables, it’s important to ensure they are accessible to all users, including those using screen readers. This can be done by:</p>
+<ul>
+<li><strong>Using <code>&lt;caption&gt;</code></strong>: Provides a summary of the table’s contents.</li>
+<li><strong>Associating <code>&lt;th&gt;</code> with <code>&lt;td&gt;</code></strong>: Use the <code>scope</code> attribute in <code>&lt;th&gt;</code> to clarify the relationship between header and data cells.</li>
+</ul>
+<h4 id="example-of-an-accessible-table">Example of an Accessible Table</h4>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;caption&gt;
+    Price and Quantity of Products
+  &lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th scope=&quot;col&quot;&gt;Product&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Price&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Quantity&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Apple&lt;/td&gt;
+    &lt;td&gt;$1.00&lt;/td&gt;
+    &lt;td&gt;10&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Orange&lt;/td&gt;
+    &lt;td&gt;$0.80&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;caption&gt;</code></strong>: Describes the table.</li>
+<li><strong><code>scope="col"</code></strong>: Clarifies that the header applies to the entire column.</li>
+</ul>
+<h2 id="block-vs-inline-elements">Block vs. Inline Elements</h2>
+<h3 id="understanding-block-level-elements">Understanding Block-Level Elements</h3>
+<p>Block-level elements take up the full width available, starting on a new line. They typically contain other block-level elements or inline elements.</p>
+<h4 id="common-block-level-elements">Common Block-Level Elements</h4>
+<ul>
+<li><strong><code>&lt;div&gt;</code></strong>: A generic container often used for layout.</li>
+<li><strong><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></strong>: Header elements.</li>
+<li><strong><code>&lt;p&gt;</code></strong>: Paragraphs.</li>
+<li><strong><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code></strong>: Lists.</li>
+</ul>
+<h4 id="example-of-block-level-elements">Example of Block-Level Elements</h4>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;h1&gt;This is a heading&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph inside a div.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="understanding-inline-elements">Understanding Inline Elements</h3>
+<p>Inline elements do not start on a new line and only take up as much width as necessary. They are often used for styling parts of text within a block-level element.</p>
+<h4 id="common-inline-elements">Common Inline Elements</h4>
+<ul>
+<li><strong><code>&lt;span&gt;</code></strong>: A generic inline container for text.</li>
+<li><strong><code>&lt;a&gt;</code></strong>: Anchors/links.</li>
+<li><strong><code>&lt;img&gt;</code></strong>: Images.</li>
+<li><strong><code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code></strong>: Emphasis and strong emphasis.</li>
+</ul>
+<h4 id="example-of-inline-elements">Example of Inline Elements</h4>
+<pre><code class="language-html">&lt;p&gt;This is a &lt;strong&gt;strong&lt;/strong&gt; word within a paragraph.&lt;/p&gt;
+&lt;a href=&quot;https://www.example.com&quot;&gt;This is a link&lt;/a&gt;
+</code></pre>
+<h3 id="differences-and-use-cases">Differences and Use Cases</h3>
+<ul>
+<li><strong>Block-Level Elements</strong>: Used to structure the main content of the page, such as sections, headers, and footers.</li>
+<li><strong>Inline Elements</strong>: Used to style specific portions of text or embed other elements within a block-level element.</li>
+</ul>
+<h3 id="mixing-block-and-inline-elements">Mixing Block and Inline Elements</h3>
+<p>While it’s generally safe to nest inline elements within block-level elements, block-level elements should not be placed within inline elements. This can lead to unexpected behavior and broken layouts.</p>
+<h4 id="example-of-proper-nesting">Example of Proper Nesting</h4>
+<pre><code class="language-html">&lt;p&gt;This is a paragraph with an &lt;a href=&quot;#&quot;&gt;inline link&lt;/a&gt; inside it.&lt;/p&gt;
+</code></pre>
+<h4 id="example-of-improper-nesting-should-be-avoided">Example of Improper Nesting (Should Be Avoided)</h4>
+<pre><code class="language-html">&lt;a href=&quot;#&quot;&gt;&lt;div&gt;This is improper nesting and should be avoided.&lt;/div&gt;&lt;/a&gt;
+</code></pre>
+<h2 id="practical-activity-working-with-advanced-html-elements">Practical Activity: Working with Advanced HTML Elements</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a webpage that includes a well-structured table and demonstrates the correct use of block-level and inline elements.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create an HTML file named <code>advanced-elements.html</code>.</li>
+<li>Add a table that lists several products, including their names, prices, and quantities. Ensure the table is accessible.</li>
+<li>Use a combination of block-level and inline elements to structure the page. For example, use <code>&lt;div&gt;</code> and <code>&lt;p&gt;</code> for layout and <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, or <code>&lt;strong&gt;</code> for inline styling.</li>
+<li>Experiment with <code>rowspan</code> and <code>colspan</code> to merge cells in your table.</li>
+<li>Add CSS to style the table and other elements to improve readability.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Ensure your table is accessible by using captions and correctly associating headers and data cells.</li>
+<li>Use block-level elements to create the overall structure of your webpage, and inline elements to style specific parts of your content.</li>
+<li>Validate your HTML to ensure proper nesting of elements and avoid common errors.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_14/" class="btn btn-neutral float-left" title="Responsive Design Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_16/" class="btn btn-neutral float-right" title="HTML5 Semantic Elements">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_14/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_16/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

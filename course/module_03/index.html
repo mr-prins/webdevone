@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_03/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>HTML Document Structure - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "HTML Document Structure";
+        var mkdocs_page_input_path = "course\\module_03.md";
+        var mkdocs_page_url = "/course/module_03/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">HTML Document Structure</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#doctype-declaration">DOCTYPE Declaration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-doctype">What is DOCTYPE?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#purpose-of-doctype">Purpose of DOCTYPE</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#html-document-tags">HTML Document Tags</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-html-tag">The &lt;html&gt; Tag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-head-tag">The &lt;head&gt; Tag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-body-tag">The &lt;body&gt; Tag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#putting-it-all-together">Putting It All Together</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#semantic-vs-non-semantic-elements">Semantic vs. Non-Semantic Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-semantic-elements">What Are Semantic Elements?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-non-semantic-elements">What Are Non-Semantic Elements?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comparison-and-examples">Comparison and Examples</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">HTML Document Structure</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="html-document-structure">HTML Document Structure</h1>
+<h2 id="overview">Overview</h2>
+<p>Understanding the structure of an HTML document is crucial for creating well-organized and functional web pages. In this module, we will dive into the essential components that make up a standard HTML document. This will include the <code>DOCTYPE</code> declaration, key HTML document tags, and a comparison between semantic and non-semantic elements.</p>
+<h2 id="doctype-declaration">DOCTYPE Declaration</h2>
+<h3 id="what-is-doctype">What is DOCTYPE?</h3>
+<p>The <code>DOCTYPE</code> declaration is an instruction to the web browser about what version of HTML the page is written in. It ensures that the browser renders the content correctly.</p>
+<h3 id="purpose-of-doctype">Purpose of DOCTYPE</h3>
+<ul>
+<li><strong>Standardization</strong>: It helps the browser to interpret the code correctly and ensures that the webpage is displayed consistently across different browsers.</li>
+<li><strong>HTML5 Declaration</strong>: The modern and most commonly used <code>DOCTYPE</code> declaration is <code>&lt;!DOCTYPE html&gt;</code>. It signifies that the document is using HTML5, the latest version of HTML.</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+</code></pre>
+<p>This simple declaration is placed at the very beginning of every HTML document.</p>
+<h2 id="html-document-tags">HTML Document Tags</h2>
+<h3 id="the-html-tag">The <code>&lt;html&gt;</code> Tag</h3>
+<p>The <code>&lt;html&gt;</code> tag is the root element of an HTML document. It wraps all the content and other HTML tags. It tells the browser that the document is an HTML document.</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;!-- All content goes inside the html tag --&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="the-head-tag">The <code>&lt;head&gt;</code> Tag</h3>
+<p>The <code>&lt;head&gt;</code> tag contains meta-information about the document that is not displayed directly on the webpage. This can include the page's title, links to stylesheets, meta tags for SEO, and more.</p>
+<ul>
+<li><strong>Title</strong>: The <code>&lt;title&gt;</code> tag, located within the <code>&lt;head&gt;</code>, sets the title of the page, which appears on the browser tab.</li>
+</ul>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;title&gt;My Webpage Title&lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
+<ul>
+<li><strong>Metadata</strong>: Meta tags can include keywords, descriptions, and other information to improve SEO and accessibility.</li>
+</ul>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;An example webpage&quot; /&gt;
+  &lt;meta name=&quot;keywords&quot; content=&quot;HTML, web development, example&quot; /&gt;
+  &lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+&lt;/head&gt;
+</code></pre>
+<h3 id="the-body-tag">The <code>&lt;body&gt;</code> Tag</h3>
+<p>The <code>&lt;body&gt;</code> tag contains all the content that will be displayed on the webpage. This includes text, images, links, tables, and other elements.</p>
+<pre><code class="language-html">&lt;body&gt;
+  &lt;h1&gt;This is the main heading&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph in the body.&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+<h3 id="putting-it-all-together">Putting It All Together</h3>
+<p>Here's how these elements work together in a basic HTML document:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;An example webpage&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;HTML, web development, example&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is a simple webpage created to demonstrate basic HTML structure.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>This code includes everything needed for a simple, yet complete HTML document.</p>
+<h2 id="semantic-vs-non-semantic-elements">Semantic vs. Non-Semantic Elements</h2>
+<h3 id="what-are-semantic-elements">What Are Semantic Elements?</h3>
+<p>Semantic elements are HTML elements that clearly describe their meaning in a human- and machine-readable way. Examples include <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>. They improve the accessibility and SEO of a webpage by providing more meaningful content structure.</p>
+<pre><code class="language-html">&lt;header&gt;
+  &lt;h1&gt;Website Header&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+  &lt;h2&gt;About Us&lt;/h2&gt;
+  &lt;p&gt;This section is about our company.&lt;/p&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+  &lt;p&gt;Contact us at info@example.com&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+<h3 id="what-are-non-semantic-elements">What Are Non-Semantic Elements?</h3>
+<p>Non-semantic elements, like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>, don’t provide any information about their content. They are often used for styling and layout purposes.</p>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;span&gt;This text is inside a span element.&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="comparison-and-examples">Comparison and Examples</h3>
+<ul>
+<li><strong>Semantic Elements</strong>: Enhance accessibility and search engine optimization by clearly defining the purpose of content.</li>
+<li><strong>Non-Semantic Elements</strong>: More flexible, often used for applying CSS styles, but don't convey meaning by themselves.</li>
+</ul>
+<p><strong>Example of Semantic vs. Non-Semantic Usage:</strong></p>
+<pre><code class="language-html">&lt;!-- Non-Semantic --&gt;
+&lt;div class=&quot;header&quot;&gt;
+  &lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;!-- Semantic --&gt;
+&lt;header&gt;
+  &lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;/header&gt;
+</code></pre>
+<p>In the second example, the <code>&lt;header&gt;</code> tag semantically indicates that the content is a header, which is more informative than using a <code>&lt;div&gt;</code> with a class name.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_02/" class="btn btn-neutral float-left" title="Introduction to HTML"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_04/" class="btn btn-neutral float-right" title="Creating a Simple Webpage">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_02/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_04/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

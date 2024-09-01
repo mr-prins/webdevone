@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_06/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Images and Multimedia - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Images and Multimedia";
+        var mkdocs_page_input_path = "course\\module_06.md";
+        var mkdocs_page_url = "/course/module_06/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Images and Multimedia</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inserting-images">Inserting Images</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-image-syntax">Basic Image Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image-size-and-dimensions">Image Size and Dimensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image-alignment-and-placement">Image Alignment and Placement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-inserting-an-image">Example: Inserting an Image</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#basic-media-elements">Basic Media Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#embedding-audio">Embedding Audio</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#embedding-video">Embedding Video</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-embedding-audio-and-video">Example: Embedding Audio and Video</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practice-activity-adding-images-and-multimedia">Practice Activity: Adding Images and Multimedia</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Images and Multimedia</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="images-and-multimedia">Images and Multimedia</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, we will explore how to enhance your webpages by adding images and basic multimedia elements like audio and video. Images are a vital part of web design, providing visual appeal and context. We will also touch on how to embed multimedia, although we won’t go into advanced features at this stage. By the end of this module, you’ll be able to insert images and simple media elements into your webpages.</p>
+<h2 id="inserting-images">Inserting Images</h2>
+<p>Images can make your webpage more engaging and informative. HTML provides the <code>&lt;img&gt;</code> tag to insert images into your webpage.</p>
+<h3 id="basic-image-syntax">Basic Image Syntax</h3>
+<p>To add an image to your webpage, you use the <code>&lt;img&gt;</code> tag, which is self-closing. The <code>src</code> attribute specifies the path to the image file, and the <code>alt</code> attribute provides alternative text that describes the image.</p>
+<pre><code class="language-html">&lt;img src=&quot;images/example.jpg&quot; alt=&quot;An example image&quot; /&gt;
+</code></pre>
+<ul>
+<li><strong><code>src</code> Attribute</strong>: The path to the image file. This can be a relative path (if the image is in the same directory as your HTML file) or an absolute path (a full URL).</li>
+<li><strong><code>alt</code> Attribute</strong>: Describes the image for users who cannot see it. This is important for accessibility and SEO.</li>
+</ul>
+<h3 id="image-size-and-dimensions">Image Size and Dimensions</h3>
+<p>You can control the size of an image using the <code>width</code> and <code>height</code> attributes. These attributes define the dimensions in pixels.</p>
+<pre><code class="language-html">&lt;img src=&quot;images/example.jpg&quot; alt=&quot;An example image&quot; width=&quot;300&quot; height=&quot;200&quot; /&gt;
+</code></pre>
+<ul>
+<li><strong><code>width</code> and <code>height</code> Attributes</strong>: Specify the dimensions of the image. Maintaining the aspect ratio is important to avoid distorting the image.</li>
+</ul>
+<h3 id="image-alignment-and-placement">Image Alignment and Placement</h3>
+<p>Images can be aligned relative to text using CSS or the deprecated <code>align</code> attribute. While CSS is preferred, it’s useful to understand how alignment works.</p>
+<pre><code class="language-html">&lt;p&gt;
+  &lt;img src=&quot;images/example.jpg&quot; alt=&quot;An example image&quot; align=&quot;left&quot; /&gt;This text
+  will wrap around the image.
+&lt;/p&gt;
+</code></pre>
+<ul>
+<li><strong><code>align</code> Attribute</strong>: Aligns the image to the left, right, or center. However, it’s better to use CSS for styling and alignment.</li>
+</ul>
+<h3 id="example-inserting-an-image">Example: Inserting an Image</h3>
+<p>Here’s a complete example of how you might insert and style an image within a webpage:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Image Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Image Gallery&lt;/h1&gt;
+    &lt;p&gt;Here is an image of a beautiful landscape:&lt;/p&gt;
+
+    &lt;img
+      src=&quot;images/landscape.jpg&quot;
+      alt=&quot;A beautiful landscape&quot;
+      width=&quot;500&quot;
+      height=&quot;300&quot;
+    /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="basic-media-elements">Basic Media Elements</h2>
+<p>Multimedia elements such as audio and video can enhance the user experience by providing content in various formats. HTML makes it easy to embed these elements directly into your webpage.</p>
+<h3 id="embedding-audio">Embedding Audio</h3>
+<p>To embed audio, you use the <code>&lt;audio&gt;</code> tag. The <code>src</code> attribute specifies the audio file, and you can include controls for play, pause, and volume.</p>
+<pre><code class="language-html">&lt;audio controls&gt;
+  &lt;source src=&quot;audio/example.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;audio&gt;</code> Tag</strong>: Embeds an audio file.</li>
+<li><strong><code>controls</code> Attribute</strong>: Adds play, pause, and volume controls to the audio player.</li>
+<li><strong><code>&lt;source&gt;</code> Tag</strong>: Specifies the audio file and its type (e.g., MP3, WAV).</li>
+</ul>
+<h3 id="embedding-video">Embedding Video</h3>
+<p>Similar to audio, videos are embedded using the <code>&lt;video&gt;</code> tag. You can also include controls and specify multiple file formats for better compatibility.</p>
+<pre><code class="language-html">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;
+  &lt;source src=&quot;video/example.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;video/example.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;video&gt;</code> Tag</strong>: Embeds a video file.</li>
+<li><strong><code>controls</code> Attribute</strong>: Adds controls for play, pause, volume, and fullscreen.</li>
+<li><strong><code>&lt;source&gt;</code> Tag</strong>: Specifies the video file and its type (e.g., MP4, OGG).</li>
+</ul>
+<h3 id="example-embedding-audio-and-video">Example: Embedding Audio and Video</h3>
+<p>Here’s how you might add both audio and video elements to your webpage:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Multimedia Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Multimedia Page&lt;/h1&gt;
+    &lt;p&gt;Here is an audio clip:&lt;/p&gt;
+
+    &lt;audio controls&gt;
+      &lt;source src=&quot;audio/example.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
+      Your browser does not support the audio element.
+    &lt;/audio&gt;
+
+    &lt;p&gt;Here is a video clip:&lt;/p&gt;
+
+    &lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;
+      &lt;source src=&quot;video/example.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+      &lt;source src=&quot;video/example.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+      Your browser does not support the video tag.
+    &lt;/video&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="practice-activity-adding-images-and-multimedia">Practice Activity: Adding Images and Multimedia</h2>
+<h3 id="objective">Objective</h3>
+<p>Enhance your webpage by adding images, audio, and video elements. Practice inserting these elements and ensuring they display correctly.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create a new HTML file named <code>media.html</code>.</li>
+<li>Insert at least one image into your webpage using the <code>&lt;img&gt;</code> tag. Experiment with different sizes and alignment options.</li>
+<li>Embed an audio clip using the <code>&lt;audio&gt;</code> tag, and ensure it has the necessary controls.</li>
+<li>Embed a video clip using the <code>&lt;video&gt;</code> tag, including controls for the user.</li>
+<li>Preview your webpage in a browser to check that all media elements are working correctly.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Use high-quality images that are appropriately sized for the web to improve loading times.</li>
+<li>Provide alternative text for all images to ensure accessibility.</li>
+<li>Test your audio and video elements across different browsers to ensure compatibility.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_05/" class="btn btn-neutral float-left" title="Common HTML Elements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_07/" class="btn btn-neutral float-right" title="HTML Forms (Intro Level)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_05/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_07/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

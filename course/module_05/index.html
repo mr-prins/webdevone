@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_05/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Common HTML Elements - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Common HTML Elements";
+        var mkdocs_page_input_path = "course\\module_05.md";
+        var mkdocs_page_url = "/course/module_05/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Common HTML Elements</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#text-formatting">Text Formatting</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#headings">Headings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paragraphs">Paragraphs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#strong-and-emphasis">Strong and Emphasis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-text-formatting-tags">Additional Text Formatting Tags</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lists">Lists</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ordered-lists">Ordered Lists</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unordered-lists">Unordered Lists</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nested-lists">Nested Lists</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#links">Links</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hyperlinks">Hyperlinks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#email-links">Email Links</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#anchor-links">Anchor Links</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practice-activity-applying-common-html-elements">Practice Activity: Applying Common HTML Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Common HTML Elements</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="common-html-elements">Common HTML Elements</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, we will explore some of the most commonly used HTML elements. These elements are essential for structuring text, creating lists, and adding links to your webpages. By the end of this module, you’ll have a solid understanding of how to format text, create lists, and insert hyperlinks using HTML.</p>
+<h2 id="text-formatting">Text Formatting</h2>
+<p>Text formatting is a fundamental aspect of web design. HTML provides various tags to format text, such as headings, paragraphs, and emphasis tags.</p>
+<h3 id="headings">Headings</h3>
+<p>Headings are used to define the titles and subtitles within your webpage. HTML provides six levels of headings, from <code>&lt;h1&gt;</code> (the most important) to <code>&lt;h6&gt;</code> (the least important).</p>
+<pre><code class="language-html">&lt;h1&gt;This is an H1 Heading&lt;/h1&gt;
+&lt;h2&gt;This is an H2 Heading&lt;/h2&gt;
+&lt;h3&gt;This is an H3 Heading&lt;/h3&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> Tags</strong>: Used for headings, with <code>&lt;h1&gt;</code> being the highest level and <code>&lt;h6&gt;</code> the lowest.</li>
+</ul>
+<h3 id="paragraphs">Paragraphs</h3>
+<p>Paragraphs are used to group blocks of text together. Each paragraph is enclosed within <code>&lt;p&gt;</code> tags.</p>
+<pre><code class="language-html">&lt;p&gt;This is a paragraph of text. It is enclosed within&lt;/p&gt;
+&lt;p&gt;tags.&lt;/p&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;p&gt;</code> Tag</strong>: Defines a paragraph of text.</li>
+</ul>
+<h3 id="strong-and-emphasis">Strong and Emphasis</h3>
+<p>Sometimes, you may want to emphasize certain words or make them bold. HTML provides <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> tags for this purpose.</p>
+<pre><code class="language-html">&lt;p&gt;
+  This is a &lt;strong&gt;strong&lt;/strong&gt; word, and this is an
+  &lt;em&gt;emphasized&lt;/em&gt; word.
+&lt;/p&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;strong&gt;</code> Tag</strong>: Makes text bold, often used for strong importance.</li>
+<li><strong><code>&lt;em&gt;</code> Tag</strong>: Italicizes text, used for emphasis.</li>
+</ul>
+<h3 id="additional-text-formatting-tags">Additional Text Formatting Tags</h3>
+<ul>
+<li><strong><code>&lt;br&gt;</code> Tag</strong>: Inserts a line break.</li>
+<li><strong><code>&lt;hr&gt;</code> Tag</strong>: Inserts a horizontal rule (a line).</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;This is a line of text.&lt;br /&gt;This is a new line of text.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;This is text after a horizontal rule.&lt;/p&gt;
+</code></pre>
+<h2 id="lists">Lists</h2>
+<p>HTML allows you to create both ordered (numbered) and unordered (bulleted) lists.</p>
+<h3 id="ordered-lists">Ordered Lists</h3>
+<p>An ordered list is a list of items that are sequentially numbered. It is created using the <code>&lt;ol&gt;</code> tag, with each list item inside the list being wrapped in <code>&lt;li&gt;</code> tags.</p>
+<pre><code class="language-html">&lt;ol&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;ol&gt;</code> Tag</strong>: Defines an ordered list.</li>
+<li><strong><code>&lt;li&gt;</code> Tag</strong>: Defines an individual list item.</li>
+</ul>
+<h3 id="unordered-lists">Unordered Lists</h3>
+<p>An unordered list is a list of items that are not numbered. Instead, they are typically displayed with bullet points.</p>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;ul&gt;</code> Tag</strong>: Defines an unordered list.</li>
+</ul>
+<h3 id="nested-lists">Nested Lists</h3>
+<p>You can also nest lists within other lists to create more complex structures.</p>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;
+    Second item
+    &lt;ul&gt;
+      &lt;li&gt;Sub-item 1&lt;/li&gt;
+      &lt;li&gt;Sub-item 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<ul>
+<li><strong>Nested <code>&lt;ul&gt;</code></strong>: Creates a sublist within a list item.</li>
+</ul>
+<h2 id="links">Links</h2>
+<p>Links are one of the most important elements in HTML as they allow users to navigate between different pages or sections within a page.</p>
+<h3 id="hyperlinks">Hyperlinks</h3>
+<p>Hyperlinks are created using the <code>&lt;a&gt;</code> tag. The <code>href</code> attribute defines the destination of the link.</p>
+<pre><code class="language-html">&lt;a href=&quot;https://www.example.com&quot;&gt;Visit Example Website&lt;/a&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;a&gt;</code> Tag</strong>: Defines a hyperlink.</li>
+<li><strong><code>href</code> Attribute</strong>: Specifies the URL of the page the link goes to.</li>
+</ul>
+<h3 id="email-links">Email Links</h3>
+<p>You can also create links that open the user’s email client to send an email. This is done by using the <code>mailto:</code> scheme in the <code>href</code> attribute.</p>
+<pre><code class="language-html">&lt;a href=&quot;mailto:info@example.com&quot;&gt;Email Us&lt;/a&gt;
+</code></pre>
+<ul>
+<li><strong><code>mailto:</code></strong>: Opens the email client to send an email to the specified address.</li>
+</ul>
+<h3 id="anchor-links">Anchor Links</h3>
+<p>Anchor links allow you to link to specific sections within the same page. This is useful for navigation within long pages.</p>
+<pre><code class="language-html">&lt;a href=&quot;#section1&quot;&gt;Go to Section 1&lt;/a&gt;
+
+&lt;h2 id=&quot;section1&quot;&gt;Section 1&lt;/h2&gt;
+&lt;p&gt;This is section 1.&lt;/p&gt;
+</code></pre>
+<ul>
+<li><strong><code>id</code> Attribute</strong>: Used to create a unique identifier for a section.</li>
+<li><strong><code>href="#id"</code></strong>: Links to the section with the matching <code>id</code>.</li>
+</ul>
+<h2 id="practice-activity-applying-common-html-elements">Practice Activity: Applying Common HTML Elements</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a webpage that demonstrates the use of the common HTML elements covered in this module, including text formatting, lists, and links.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create a new HTML file named <code>elements.html</code>.</li>
+<li>Add a variety of headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>), paragraphs, and text emphasis using <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code>.</li>
+<li>Create both ordered and unordered lists, and experiment with nesting lists within lists.</li>
+<li>Add hyperlinks to other websites and create anchor links that navigate to different sections within the same page.</li>
+<li>Include an email link that opens the user’s email client.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Ensure that each element is clearly visible and properly formatted.</li>
+<li>Use meaningful text and URLs for your links.</li>
+<li>Test your anchor links to make sure they navigate correctly within the page.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_04/" class="btn btn-neutral float-left" title="Creating a Simple Webpage"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_06/" class="btn btn-neutral float-right" title="Images and Multimedia">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_04/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_06/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

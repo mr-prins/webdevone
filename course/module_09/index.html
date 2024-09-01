@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_09/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Introduction to CSS - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Introduction to CSS";
+        var mkdocs_page_input_path = "course\\module_09.md";
+        var mkdocs_page_url = "/course/module_09/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction to CSS</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-css">What is CSS?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-role-of-css-in-web-design">The Role of CSS in Web Design</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits-of-using-css">Benefits of Using CSS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-css-works">How CSS Works</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#css-syntax">CSS Syntax</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-css-syntax-structure">Basic CSS Syntax Structure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-of-a-css-rule">Example of a CSS Rule</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multiple-declarations">Multiple Declarations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comments-in-css">Comments in CSS</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#understanding-selectors">Understanding Selectors</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#element-selectors">Element Selectors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#class-selectors">Class Selectors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#id-selectors">ID Selectors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#grouping-selectors">Grouping Selectors</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practice-activity-writing-basic-css">Practice Activity: Writing Basic CSS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Introduction to CSS</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="introduction-to-css">Introduction to CSS</h1>
+<h2 id="overview">Overview</h2>
+<p>Cascading Style Sheets (CSS) is the language used to style HTML documents. While HTML provides the structure of a webpage, CSS is responsible for its visual presentation, such as layout, colors, and fonts. In this module, you will be introduced to the basics of CSS, including what it is, how it works, and how to write basic CSS syntax to style your web pages.</p>
+<h2 id="what-is-css">What is CSS?</h2>
+<h3 id="the-role-of-css-in-web-design">The Role of CSS in Web Design</h3>
+<p>CSS (Cascading Style Sheets) is a stylesheet language that allows you to control the presentation of HTML elements. It enables you to separate the content (HTML) from its visual style, making it easier to maintain and update your website's appearance.</p>
+<h3 id="benefits-of-using-css">Benefits of Using CSS</h3>
+<ul>
+<li><strong>Separation of Concerns</strong>: CSS allows you to keep your HTML content separate from your styling, making your code cleaner and easier to maintain.</li>
+<li><strong>Consistency</strong>: By using CSS, you can ensure a consistent look and feel across all pages of your website.</li>
+<li><strong>Flexibility</strong>: CSS provides the flexibility to change the design of a website without altering the HTML structure.</li>
+<li><strong>Accessibility</strong>: Proper use of CSS can improve the accessibility of your website for users with disabilities.</li>
+</ul>
+<h3 id="how-css-works">How CSS Works</h3>
+<p>CSS works by applying styles to HTML elements based on rules defined in the CSS code. These rules consist of selectors, properties, and values.</p>
+<ul>
+<li><strong>Selectors</strong>: Target specific HTML elements to style.</li>
+<li><strong>Properties</strong>: Define the aspects of the element to be styled (e.g., color, font-size).</li>
+<li><strong>Values</strong>: Specify the settings for the properties.</li>
+</ul>
+<p>For example, the following CSS rule changes the text color of all paragraphs to blue:</p>
+<pre><code class="language-css">p {
+  color: blue;
+}
+</code></pre>
+<ul>
+<li><strong><code>p</code> Selector</strong>: Targets all <code>&lt;p&gt;</code> (paragraph) elements.</li>
+<li><strong><code>color</code> Property</strong>: Specifies the text color.</li>
+<li><strong><code>blue</code> Value</strong>: Sets the text color to blue.</li>
+</ul>
+<h2 id="css-syntax">CSS Syntax</h2>
+<h3 id="basic-css-syntax-structure">Basic CSS Syntax Structure</h3>
+<p>A CSS rule is composed of a selector, a set of curly braces <code>{}</code>, and one or more declarations inside the braces. Each declaration includes a property and a value, separated by a colon <code>:</code>.</p>
+<pre><code class="language-css">selector {
+  property: value;
+}
+</code></pre>
+<h3 id="example-of-a-css-rule">Example of a CSS Rule</h3>
+<p>Here’s an example of a simple CSS rule that changes the background color of a webpage to light gray:</p>
+<pre><code class="language-css">body {
+  background-color: lightgray;
+}
+</code></pre>
+<ul>
+<li><strong><code>body</code> Selector</strong>: Targets the entire webpage (the <code>&lt;body&gt;</code> element).</li>
+<li><strong><code>background-color</code> Property</strong>: Specifies the background color.</li>
+<li><strong><code>lightgray</code> Value</strong>: Sets the background color to light gray.</li>
+</ul>
+<h3 id="multiple-declarations">Multiple Declarations</h3>
+<p>You can include multiple declarations within a single CSS rule. Each declaration should be separated by a semicolon <code>;</code>.</p>
+<pre><code class="language-css">h1 {
+  color: navy;
+  font-size: 24px;
+  text-align: center;
+}
+</code></pre>
+<ul>
+<li><strong><code>color: navy;</code></strong>: Sets the text color of all <code>&lt;h1&gt;</code> elements to navy.</li>
+<li><strong><code>font-size: 24px;</code></strong>: Sets the font size to 24 pixels.</li>
+<li><strong><code>text-align: center;</code></strong>: Centers the text horizontally.</li>
+</ul>
+<h3 id="comments-in-css">Comments in CSS</h3>
+<p>Just like in HTML, you can add comments to your CSS code. Comments are ignored by the browser and are used to explain sections of your code.</p>
+<pre><code class="language-css">/* This is a comment in CSS */
+p {
+  color: green;
+}
+</code></pre>
+<ul>
+<li><strong>Syntax</strong>: Comments in CSS are written between <code>/*</code> and <code>*/</code>.</li>
+</ul>
+<h2 id="understanding-selectors">Understanding Selectors</h2>
+<h3 id="element-selectors">Element Selectors</h3>
+<p>Element selectors target HTML elements by their tag name. For example, to style all <code>&lt;h1&gt;</code> headings:</p>
+<pre><code class="language-css">h1 {
+  color: red;
+}
+</code></pre>
+<h3 id="class-selectors">Class Selectors</h3>
+<p>Class selectors target elements based on their <code>class</code> attribute. To style elements with the class <code>highlight</code>:</p>
+<pre><code class="language-css">.highlight {
+  background-color: yellow;
+}
+</code></pre>
+<p>To apply this class in HTML:</p>
+<pre><code class="language-html">&lt;p class=&quot;highlight&quot;&gt;This text is highlighted.&lt;/p&gt;
+</code></pre>
+<h3 id="id-selectors">ID Selectors</h3>
+<p>ID selectors target a specific element with a unique <code>id</code> attribute. To style the element with the ID <code>header</code>:</p>
+<pre><code class="language-css">#header {
+  font-size: 32px;
+  font-weight: bold;
+}
+</code></pre>
+<p>To apply this ID in HTML:</p>
+<pre><code class="language-html">&lt;h1 id=&quot;header&quot;&gt;Welcome to My Website&lt;/h1&gt;
+</code></pre>
+<h3 id="grouping-selectors">Grouping Selectors</h3>
+<p>You can group multiple selectors to apply the same styles to different elements:</p>
+<pre><code class="language-css">h1,
+h2,
+h3 {
+  color: darkblue;
+}
+</code></pre>
+<p>This rule will apply the same text color to all <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;h3&gt;</code> elements.</p>
+<h2 id="practice-activity-writing-basic-css">Practice Activity: Writing Basic CSS</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a basic CSS stylesheet to style an HTML webpage. Experiment with different selectors, properties, and values to see how CSS changes the appearance of the page.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create a new CSS file named <code>styles.css</code>.</li>
+<li>Write CSS rules to:</li>
+<li>Change the background color of the page.</li>
+<li>Set the text color and font size for headings.</li>
+<li>Style a paragraph with a class.</li>
+<li>Center the text of a specific element using an ID.</li>
+<li>Link the CSS file to an HTML file using the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> section:</li>
+</ol>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+</code></pre>
+<ol>
+<li>Test your CSS by opening the HTML file in a web browser to see the changes in style.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Use element, class, and ID selectors to apply styles to different parts of your webpage.</li>
+<li>Experiment with different CSS properties like <code>color</code>, <code>font-size</code>, <code>margin</code>, and <code>padding</code> to see their effects.</li>
+<li>Keep your CSS organized with comments to explain different sections of your stylesheet.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_08/" class="btn btn-neutral float-left" title="Best Practices in HTML I"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_10/" class="btn btn-neutral float-right" title="Applying CSS to HTML">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_08/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_10/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

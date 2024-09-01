@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_12/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>The Box Model - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "The Box Model";
+        var mkdocs_page_input_path = "course\\module_12.md";
+        var mkdocs_page_url = "/course/module_12/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">The Box Model</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#understanding-the-box-model">Understanding the Box Model</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-the-box-model">What is the Box Model?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#visual-representation-of-the-box-model">Visual Representation of the Box Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-of-the-box-model">Example of the Box Model</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#components-of-the-box-model">Components of the Box Model</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-content">1. Content</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-padding">2. Padding</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_1">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-border">3. Border</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_2">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-margin">4. Margin</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example_3">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#box-sizing">Box Sizing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#content-box-vs-border-box">Content-Box vs. Border-Box</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#content-box-default">Content-Box (Default)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#border-box">Border-Box</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-comparison">Example Comparison</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practical-application-applying-the-box-model">Practical Application: Applying the Box Model</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">The Box Model</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="the-box-model">The Box Model</h1>
+<h2 id="overview">Overview</h2>
+<p>The CSS Box Model is a fundamental concept that underlies the layout and design of all web pages. Understanding the Box Model is crucial for controlling the spacing, borders, and overall appearance of HTML elements. In this module, you will learn about the different components of the Box Model—content, padding, borders, and margins—and how they work together to define the space an element occupies on a webpage.</p>
+<h2 id="understanding-the-box-model">Understanding the Box Model</h2>
+<h3 id="what-is-the-box-model">What is the Box Model?</h3>
+<p>The Box Model describes how every HTML element on a webpage is a rectangular box that consists of four key components:</p>
+<ol>
+<li><strong>Content</strong>: The actual content of the element, such as text, images, or other elements.</li>
+<li><strong>Padding</strong>: The space between the content and the border.</li>
+<li><strong>Border</strong>: A line surrounding the padding (if any) and the content.</li>
+<li><strong>Margin</strong>: The space outside the border, separating the element from other elements.</li>
+</ol>
+<h3 id="visual-representation-of-the-box-model">Visual Representation of the Box Model</h3>
+<p>Here’s a visual breakdown of the Box Model:</p>
+<pre><code>+--------------------------+
+|         Margin           |
+|  +--------------------+  |
+|  |      Border         |  |
+|  |  +--------------+  |  |
+|  |  |   Padding    |  |  |
+|  |  | +----------+ |  |  |
+|  |  | |  Content  | |  |  |
+|  |  | +----------+ |  |  |
+|  |  +--------------+  |  |
+|  +--------------------+  |
++--------------------------+
+</code></pre>
+<h3 id="example-of-the-box-model">Example of the Box Model</h3>
+<p>Let’s look at an example to see how the Box Model applies to an HTML element:</p>
+<pre><code class="language-css">div {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
+}
+</code></pre>
+<ul>
+<li><strong>Content</strong>: The content area is 200px wide.</li>
+<li><strong>Padding</strong>: Adds 20px of space inside the element, around the content.</li>
+<li><strong>Border</strong>: Adds a 5px solid black border around the padding.</li>
+<li><strong>Margin</strong>: Adds 10px of space outside the border, separating this element from others.</li>
+</ul>
+<h2 id="components-of-the-box-model">Components of the Box Model</h2>
+<h3 id="1-content">1. Content</h3>
+<p>The <code>width</code> and <code>height</code> properties define the size of the content area. By default, the size of the content area does not include padding, border, or margin.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-css">div {
+  width: 300px;
+  height: 150px;
+}
+</code></pre>
+<ul>
+<li><strong><code>width: 300px;</code></strong>: Sets the width of the content area to 300 pixels.</li>
+<li><strong><code>height: 150px;</code></strong>: Sets the height of the content area to 150 pixels.</li>
+</ul>
+<h3 id="2-padding">2. Padding</h3>
+<p>Padding is the space between the content and the border. It’s defined using the <code>padding</code> property, and you can set padding for all sides or individually for each side.</p>
+<h4 id="example_1">Example</h4>
+<pre><code class="language-css">div {
+  padding: 20px;
+}
+</code></pre>
+<ul>
+<li><strong><code>padding: 20px;</code></strong>: Adds 20 pixels of padding on all sides of the content.</li>
+</ul>
+<p>You can also specify padding for each side:</p>
+<pre><code class="language-css">div {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+}
+</code></pre>
+<h3 id="3-border">3. Border</h3>
+<p>The <code>border</code> property adds a border around the element’s padding and content. Borders can have different styles, widths, and colors.</p>
+<h4 id="example_2">Example</h4>
+<pre><code class="language-css">div {
+  border: 2px solid blue;
+}
+</code></pre>
+<ul>
+<li><strong><code>border: 2px solid blue;</code></strong>: Adds a 2-pixel solid blue border around the element.</li>
+</ul>
+<p>You can also set borders individually for each side:</p>
+<pre><code class="language-css">div {
+  border-top: 4px dashed green;
+  border-right: 2px solid red;
+  border-bottom: 3px dotted purple;
+  border-left: 5px double black;
+}
+</code></pre>
+<h3 id="4-margin">4. Margin</h3>
+<p>Margins create space outside the border, separating the element from adjacent elements. Like padding, you can set margins for all sides or individually.</p>
+<h4 id="example_3">Example</h4>
+<pre><code class="language-css">div {
+  margin: 30px;
+}
+</code></pre>
+<ul>
+<li><strong><code>margin: 30px;</code></strong>: Adds 30 pixels of margin on all sides of the element.</li>
+</ul>
+<p>You can also set margins individually:</p>
+<pre><code class="language-css">div {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+</code></pre>
+<h2 id="box-sizing">Box Sizing</h2>
+<h3 id="content-box-vs-border-box">Content-Box vs. Border-Box</h3>
+<p>The <code>box-sizing</code> property allows you to control how the width and height of an element are calculated. The default value is <code>content-box</code>, but you can change it to <code>border-box</code> to include padding and borders in the width and height calculations.</p>
+<h4 id="content-box-default">Content-Box (Default)</h4>
+<p>In <code>content-box</code>, the width and height apply only to the content, and the padding, border, and margin are added outside.</p>
+<pre><code class="language-css">div {
+  width: 200px; /* Only the content is 200px wide */
+  padding: 20px;
+  border: 10px solid black;
+  box-sizing: content-box; /* Default value */
+}
+</code></pre>
+<h4 id="border-box">Border-Box</h4>
+<p>In <code>border-box</code>, the width and height include the content, padding, and border, but not the margin. This makes it easier to size elements without worrying about extra padding or borders affecting the total size.</p>
+<pre><code class="language-css">div {
+  width: 200px; /* Total width is 200px, including padding and border */
+  padding: 20px;
+  border: 10px solid black;
+  box-sizing: border-box;
+}
+</code></pre>
+<h3 id="example-comparison">Example Comparison</h3>
+<p>Here’s a comparison of <code>content-box</code> and <code>border-box</code>:</p>
+<pre><code class="language-css">/* Content-box (default) */
+.content-box {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid black;
+  box-sizing: content-box;
+}
+
+/* Border-box */
+.border-box {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+</code></pre>
+<p>In the <code>content-box</code>, the actual rendered width is 300px + 20px (padding on both sides) + 10px (border on both sides) = 350px. In the <code>border-box</code>, the total width remains 300px, including padding and border.</p>
+<h2 id="practical-application-applying-the-box-model">Practical Application: Applying the Box Model</h2>
+<h3 id="objective">Objective</h3>
+<p>Apply the Box Model to different elements on a webpage to control their layout, spacing, and appearance.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create an HTML file named <code>box-model.html</code> and a CSS file named <code>box-model.css</code>.</li>
+<li>Apply the Box Model to various elements, such as:</li>
+<li>A header with padding and a border.</li>
+<li>A content area with a specific width, margin, and padding.</li>
+<li>A sidebar with a border and margin to separate it from the main content.</li>
+<li>Experiment with the <code>box-sizing</code> property to see how it affects the total size of elements.</li>
+<li>Preview your webpage in a browser and inspect the elements using developer tools to see how the Box Model is applied.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Use the browser’s developer tools to visualize the Box Model and understand how different properties affect the layout.</li>
+<li>Experiment with different values for padding, border, and margin to see how they influence the overall design.</li>
+<li>Remember that using <code>box-sizing: border-box;</code> can simplify the layout process, especially when dealing with responsive designs.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_11/" class="btn btn-neutral float-left" title="Basic CSS Properties"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_13/" class="btn btn-neutral float-right" title="Layout Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_11/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_13/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

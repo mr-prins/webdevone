@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_10/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Applying CSS to HTML - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Applying CSS to HTML";
+        var mkdocs_page_input_path = "course\\module_10.md";
+        var mkdocs_page_url = "/course/module_10/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Applying CSS to HTML</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#three-methods-of-applying-css">Three Methods of Applying CSS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-inline-styles">1. Inline Styles</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-inline-styles">Example of Inline Styles</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-inline-styles">When to Use Inline Styles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-internal-stylesheets">2. Internal Stylesheets</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-an-internal-stylesheet">Example of an Internal Stylesheet</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-internal-stylesheets">When to Use Internal Stylesheets</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-external-stylesheets">3. External Stylesheets</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-of-an-external-stylesheet">Example of an External Stylesheet</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#when-to-use-external-stylesheets">When to Use External Stylesheets</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-importance-of-external-stylesheets">The Importance of External Stylesheets</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#linking-multiple-stylesheets">Linking Multiple Stylesheets</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-of-linking-multiple-stylesheets">Example of Linking Multiple Stylesheets</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practice-activity-applying-css-to-an-html-document">Practice Activity: Applying CSS to an HTML Document</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Applying CSS to HTML</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="applying-css-to-html">Applying CSS to HTML</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, we will explore how to apply CSS to your HTML documents to style and enhance your webpages. You will learn three main methods for adding CSS: inline styles, internal stylesheets, and external stylesheets. Understanding these methods will allow you to choose the best approach for different scenarios and help you keep your HTML and CSS organized.</p>
+<h2 id="three-methods-of-applying-css">Three Methods of Applying CSS</h2>
+<h3 id="1-inline-styles">1. Inline Styles</h3>
+<p><strong>Inline styles</strong> are applied directly to HTML elements using the <code>style</code> attribute. This method is useful for applying a unique style to a single element, but it’s not recommended for styling entire pages due to its lack of scalability and difficulty in maintenance.</p>
+<h4 id="example-of-inline-styles">Example of Inline Styles</h4>
+<pre><code class="language-html">&lt;p style=&quot;color: red; font-size: 20px;&quot;&gt;
+  This is a paragraph with inline styles.
+&lt;/p&gt;
+</code></pre>
+<ul>
+<li><strong><code>style</code> Attribute</strong>: Contains the CSS rules applied directly to the element.</li>
+<li><strong>Properties</strong>: The <code>color</code> and <code>font-size</code> properties are applied specifically to this paragraph.</li>
+</ul>
+<h4 id="when-to-use-inline-styles">When to Use Inline Styles</h4>
+<ul>
+<li>For quick, temporary styling.</li>
+<li>When applying unique styles that won’t be reused elsewhere.</li>
+<li>During testing or debugging specific elements.</li>
+</ul>
+<h3 id="2-internal-stylesheets">2. Internal Stylesheets</h3>
+<p><strong>Internal stylesheets</strong> are defined within the <code>&lt;style&gt;</code> tag inside the <code>&lt;head&gt;</code> section of an HTML document. This method allows you to keep all your styles in one place but only applies them to a single HTML document.</p>
+<h4 id="example-of-an-internal-stylesheet">Example of an Internal Stylesheet</h4>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        background-color: lightblue;
+      }
+      h1 {
+        color: navy;
+        text-align: center;
+      }
+      p {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This page uses an internal stylesheet.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;style&gt;</code> Tag</strong>: Encapsulates all the CSS rules for that document.</li>
+<li><strong>CSS Rules</strong>: Applied to elements throughout the document.</li>
+</ul>
+<h4 id="when-to-use-internal-stylesheets">When to Use Internal Stylesheets</h4>
+<ul>
+<li>When you want to style a single document without affecting others.</li>
+<li>For small projects where external stylesheets might be unnecessary.</li>
+<li>When quick prototyping or testing styles specific to one page.</li>
+</ul>
+<h3 id="3-external-stylesheets">3. External Stylesheets</h3>
+<p><strong>External stylesheets</strong> are the most common and recommended method for applying CSS to HTML. The styles are written in a separate <code>.css</code> file and linked to your HTML document using the <code>&lt;link&gt;</code> tag. This method promotes reusability and maintainability, as a single stylesheet can be linked to multiple HTML files.</p>
+<h4 id="example-of-an-external-stylesheet">Example of an External Stylesheet</h4>
+<p>First, create a CSS file named <code>styles.css</code>:</p>
+<pre><code class="language-css">body {
+  background-color: lightyellow;
+}
+h1 {
+  color: green;
+  font-family: &quot;Georgia&quot;, serif;
+}
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+</code></pre>
+<p>Then, link this stylesheet to your HTML document:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This page uses an external stylesheet.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;link&gt;</code> Tag</strong>: Connects the external CSS file to the HTML document.</li>
+<li><strong><code>href</code> Attribute</strong>: Specifies the path to the CSS file.</li>
+</ul>
+<h4 id="when-to-use-external-stylesheets">When to Use External Stylesheets</h4>
+<ul>
+<li>For larger projects with multiple pages.</li>
+<li>When maintaining a consistent look across several webpages.</li>
+<li>When you need to separate content (HTML) from design (CSS) for better organization.</li>
+</ul>
+<h2 id="the-importance-of-external-stylesheets">The Importance of External Stylesheets</h2>
+<p>External stylesheets are the preferred method in web development for several reasons:</p>
+<ul>
+<li><strong>Reusability</strong>: A single stylesheet can be used across multiple HTML documents, ensuring consistency and reducing duplication.</li>
+<li><strong>Maintainability</strong>: Changes to the design can be made by editing just one file, which updates the style across all linked pages.</li>
+<li><strong>Performance</strong>: Browsers cache external stylesheets, which can improve page load times when users navigate between different pages of the same website.</li>
+</ul>
+<h2 id="linking-multiple-stylesheets">Linking Multiple Stylesheets</h2>
+<p>Sometimes, you might need to use more than one external stylesheet. This can be done by adding multiple <code>&lt;link&gt;</code> tags in the <code>&lt;head&gt;</code> section. The order in which you link the stylesheets matters, as CSS rules are applied in the order they are loaded.</p>
+<h4 id="example-of-linking-multiple-stylesheets">Example of Linking Multiple Stylesheets</h4>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;reset.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This page uses multiple external stylesheets.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li><strong><code>reset.css</code></strong>: Typically used to reset or normalize default browser styles.</li>
+<li><strong><code>styles.css</code></strong>: Contains the custom styles for your webpage.</li>
+</ul>
+<h2 id="practice-activity-applying-css-to-an-html-document">Practice Activity: Applying CSS to an HTML Document</h2>
+<h3 id="objective">Objective</h3>
+<p>Apply all three methods of CSS to style an HTML webpage. Experiment with inline styles, internal stylesheets, and external stylesheets to see how they differ and how they can be used effectively.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create an HTML file named <code>index.html</code>.</li>
+<li>Add inline styles to a specific paragraph.</li>
+<li>Use an internal stylesheet to style the document’s header and footer.</li>
+<li>Link to an external stylesheet that sets the overall layout and color scheme.</li>
+<li>Create an external CSS file named <code>styles.css</code> and write your styles in it.</li>
+<li>Test your webpage in a browser to see how the different CSS methods interact.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Start by applying inline styles to get an immediate feel for how CSS works.</li>
+<li>Move to internal stylesheets to manage styles within a single document.</li>
+<li>Finally, transition to external stylesheets for more comprehensive and scalable styling.</li>
+<li>Remember that inline styles will override internal and external styles due to CSS specificity.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_09/" class="btn btn-neutral float-left" title="Introduction to CSS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_11/" class="btn btn-neutral float-right" title="Basic CSS Properties">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_09/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_11/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

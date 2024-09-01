@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_13/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Layout Basics - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Layout Basics";
+        var mkdocs_page_input_path = "course\\module_13.md";
+        var mkdocs_page_url = "/course/module_13/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Creating a Simple Webpage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Layout Basics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introduction-to-flexbox">Introduction to Flexbox</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-flexbox">What is Flexbox?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-concepts-of-flexbox">Key Concepts of Flexbox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-flexbox-properties">Basic Flexbox Properties</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-of-a-simple-flexbox-layout">Example of a Simple Flexbox Layout</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introduction-to-css-grid">Introduction to CSS Grid</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-css-grid">What is CSS Grid?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-concepts-of-css-grid">Key Concepts of CSS Grid</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-grid-properties">Basic Grid Properties</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-of-a-simple-grid-layout">Example of a Simple Grid Layout</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-simple-layouts-with-flexbox-and-grid">Creating Simple Layouts with Flexbox and Grid</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#flexbox-layout-example">Flexbox Layout Example</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#grid-layout-example">Grid Layout Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practice-activity-building-a-simple-layout">Practice Activity: Building a Simple Layout</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Layout Basics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="layout-basics">Layout Basics</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, you will learn the fundamentals of creating web page layouts using CSS. Understanding layout techniques is essential for building responsive, organized, and visually appealing web pages. We will cover two powerful CSS layout systems: Flexbox and Grid. By mastering these tools, you’ll be able to create complex and responsive layouts with ease.</p>
+<h2 id="introduction-to-flexbox">Introduction to Flexbox</h2>
+<h3 id="what-is-flexbox">What is Flexbox?</h3>
+<p>Flexbox (Flexible Box Layout) is a one-dimensional layout method for arranging items in rows or columns. It simplifies the process of aligning and distributing space among items within a container, even when their size is unknown or dynamic.</p>
+<h3 id="key-concepts-of-flexbox">Key Concepts of Flexbox</h3>
+<ul>
+<li><strong>Flex Container</strong>: The parent element that holds flex items. It is defined by setting <code>display: flex;</code> on an element.</li>
+<li><strong>Flex Items</strong>: The children of the flex container. These items will be laid out according to the flexbox rules.</li>
+</ul>
+<h3 id="basic-flexbox-properties">Basic Flexbox Properties</h3>
+<ol>
+<li><strong>display: flex;</strong></li>
+</ol>
+<p>Defines a flex container and enables flexbox for its children.</p>
+<p><code>css
+   .container {
+     display: flex;
+   }</code></p>
+<ol>
+<li><strong>flex-direction</strong></li>
+</ol>
+<p>Specifies the direction of the flex items inside the container.</p>
+<ul>
+<li><code>row</code>: Default, items are placed in a row (left to right).</li>
+<li><code>column</code>: Items are placed in a column (top to bottom).</li>
+<li><code>row-reverse</code>: Items are placed in a row in reverse order (right to left).</li>
+<li><code>column-reverse</code>: Items are placed in a column in reverse order (bottom to top).</li>
+</ul>
+<p><code>css
+   .container {
+     flex-direction: row;
+   }</code></p>
+<ol>
+<li><strong>justify-content</strong></li>
+</ol>
+<p>Aligns flex items along the main axis (horizontal if <code>flex-direction</code> is <code>row</code>, vertical if <code>column</code>).</p>
+<ul>
+<li><code>flex-start</code>: Items align to the start of the container.</li>
+<li><code>flex-end</code>: Items align to the end of the container.</li>
+<li><code>center</code>: Items are centered along the main axis.</li>
+<li><code>space-between</code>: Items are evenly distributed, with the first item at the start and the last item at the end.</li>
+<li><code>space-around</code>: Items are evenly distributed with equal space around them.</li>
+</ul>
+<p><code>css
+   .container {
+     justify-content: space-between;
+   }</code></p>
+<ol>
+<li><strong>align-items</strong></li>
+</ol>
+<p>Aligns flex items along the cross axis (perpendicular to the main axis).</p>
+<ul>
+<li><code>flex-start</code>: Items align to the start of the cross axis.</li>
+<li><code>flex-end</code>: Items align to the end of the cross axis.</li>
+<li><code>center</code>: Items are centered along the cross axis.</li>
+<li><code>stretch</code>: Items are stretched to fill the container (default).</li>
+</ul>
+<p><code>css
+   .container {
+     align-items: center;
+   }</code></p>
+<ol>
+<li><strong>flex-wrap</strong></li>
+</ol>
+<p>Controls whether flex items should wrap onto multiple lines.</p>
+<ul>
+<li><code>nowrap</code>: All items are on one line (default).</li>
+<li><code>wrap</code>: Items wrap onto multiple lines from top to bottom.</li>
+<li><code>wrap-reverse</code>: Items wrap onto multiple lines from bottom to top.</li>
+</ul>
+<p><code>css
+   .container {
+     flex-wrap: wrap;
+   }</code></p>
+<h3 id="example-of-a-simple-flexbox-layout">Example of a Simple Flexbox Layout</h3>
+<pre><code class="language-css">.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;Item 1&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Item 2&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>In this example, the <code>.container</code> is a flex container with three items that are spaced evenly, centered along the cross axis, and allowed to wrap onto multiple lines if necessary.</p>
+<h2 id="introduction-to-css-grid">Introduction to CSS Grid</h2>
+<h3 id="what-is-css-grid">What is CSS Grid?</h3>
+<p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex and responsive grid-based layouts. Unlike Flexbox, which is one-dimensional, Grid can control both rows and columns simultaneously.</p>
+<h3 id="key-concepts-of-css-grid">Key Concepts of CSS Grid</h3>
+<ul>
+<li><strong>Grid Container</strong>: The parent element that holds grid items. It is defined by setting <code>display: grid;</code> on an element.</li>
+<li><strong>Grid Items</strong>: The children of the grid container. These items are placed within the grid according to the grid rules.</li>
+</ul>
+<h3 id="basic-grid-properties">Basic Grid Properties</h3>
+<ol>
+<li><strong>display: grid;</strong></li>
+</ol>
+<p>Defines a grid container and enables grid layout for its children.</p>
+<p><code>css
+   .grid-container {
+     display: grid;
+   }</code></p>
+<ol>
+<li><strong>grid-template-columns</strong> and <strong>grid-template-rows</strong></li>
+</ol>
+<p>Defines the structure of the grid by setting the number and size of columns and rows.</p>
+<p><code>css
+   .grid-container {
+     grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+     grid-template-rows: auto; /* Rows will adjust to content size */
+   }</code></p>
+<ul>
+<li><code>1fr</code>: Fractional unit; divides available space equally among columns or rows.</li>
+<li>
+<p><code>auto</code>: Adjusts to the size of the content.</p>
+</li>
+<li>
+<p><strong>grid-gap</strong></p>
+</li>
+</ul>
+<p>Sets the spacing (gutter) between grid items.</p>
+<p><code>css
+   .grid-container {
+     grid-gap: 20px;
+   }</code></p>
+<ol>
+<li><strong>justify-items</strong></li>
+</ol>
+<p>Aligns grid items along the horizontal axis within their grid area.</p>
+<ul>
+<li><code>start</code>: Items align to the start of their area.</li>
+<li><code>end</code>: Items align to the end of their area.</li>
+<li><code>center</code>: Items are centered within their area.</li>
+<li><code>stretch</code>: Items stretch to fill their area (default).</li>
+</ul>
+<p><code>css
+   .grid-container {
+     justify-items: center;
+   }</code></p>
+<ol>
+<li><strong>align-items</strong></li>
+</ol>
+<p>Aligns grid items along the vertical axis within their grid area.</p>
+<p><code>css
+   .grid-container {
+     align-items: stretch; /* Default value */
+   }</code></p>
+<h3 id="example-of-a-simple-grid-layout">Example of a Simple Grid Layout</h3>
+<pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: lightgreen;
+  padding: 20px;
+}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;grid-container&quot;&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Grid Item 1&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Grid Item 2&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Grid Item 3&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Grid Item 4&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Grid Item 5&lt;/div&gt;
+  &lt;div class=&quot;grid-item&quot;&gt;Grid Item 6&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>In this example, the <code>.grid-container</code> creates a grid with three equal-width columns. The <code>.grid-item</code> elements are placed within the grid, each occupying one cell.</p>
+<h2 id="creating-simple-layouts-with-flexbox-and-grid">Creating Simple Layouts with Flexbox and Grid</h2>
+<h3 id="flexbox-layout-example">Flexbox Layout Example</h3>
+<p>Let’s create a simple webpage layout using Flexbox for a header, navigation, main content, and footer.</p>
+<pre><code class="language-css">.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header,
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav,
+.main {
+  flex: 1;
+  display: flex;
+}
+
+.nav {
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 200px;
+}
+
+.main {
+  background-color: #fff;
+  padding: 20px;
+  flex: 1;
+}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;header&quot;&gt;Header&lt;/div&gt;
+  &lt;div class=&quot;nav&quot;&gt;Navigation&lt;/div&gt;
+  &lt;div class=&quot;main&quot;&gt;Main Content&lt;/div&gt;
+  &lt;div class=&quot;footer&quot;&gt;Footer&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="grid-layout-example">Grid Layout Example</h3>
+<p>Now, create a similar layout using CSS Grid:</p>
+<pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    &quot;header header&quot;
+    &quot;nav main&quot;
+    &quot;footer footer&quot;;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.main {
+  grid-area: main;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;grid-container&quot;&gt;
+  &lt;div class=&quot;header&quot;&gt;Header&lt;/div&gt;
+  &lt;div class=&quot;nav&quot;&gt;Navigation&lt;/div&gt;
+  &lt;div class=&quot;main&quot;&gt;Main Content&lt;/div&gt;
+  &lt;div class=&quot;footer&quot;&gt;Footer&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="practice-activity-building-a-simple-layout">Practice Activity: Building a Simple Layout</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a simple webpage layout using both Flexbox and Grid to understand the differences and strengths of each method.</p>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create two separate HTML files: <code>flexbox-layout.html</code> and `grid-layout</li>
+</ol>
+<p>.html<code>.
+2. In</code>flexbox-layout.html<code>, build a basic webpage layout using Flexbox.
+3. In</code>grid-layout.html<code>, create a similar layout using CSS Grid.
+4. Experiment with different properties such as</code>justify-content<code>,</code>align-items<code>,</code>grid-template-areas<code>, and</code>grid-gap`. 5. Test your layouts in a browser and use developer tools to inspect and understand how the elements are arranged.</p>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Flexbox is great for one-dimensional layouts where you need to align and distribute space among items in a row or column.</li>
+<li>Grid is powerful for two-dimensional layouts where you need to control both rows and columns.</li>
+<li>Use media queries to make your layouts responsive, adapting to different screen sizes.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_12/" class="btn btn-neutral float-left" title="The Box Model"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_14/" class="btn btn-neutral float-right" title="Responsive Design Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_12/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_14/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

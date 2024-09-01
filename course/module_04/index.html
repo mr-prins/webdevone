@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevone.mrprins.com/course/module_04/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Creating a Simple Webpage - Web Development I - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Creating a Simple Webpage";
+        var mkdocs_page_input_path = "course\\module_04.md";
+        var mkdocs_page_url = "/course/module_04/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development I - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Git and GitHub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Introduction to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">HTML Document Structure</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Creating a Simple Webpage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-by-step-guide-building-a-basic-webpage">Step-by-Step Guide: Building a Basic Webpage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-setting-up-the-html-document">1. Setting Up the HTML Document</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-creating-the-header">2. Creating the Header</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-adding-navigation">3. Adding Navigation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-creating-the-main-content-area">4. Creating the Main Content Area</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-adding-a-footer">5. Adding a Footer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-putting-it-all-together">6. Putting It All Together</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practice-activity-building-your-own-webpage">Practice Activity: Building Your Own Webpage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Common HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Images and Multimedia</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">HTML Forms (Intro Level)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Best Practices in HTML I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">Introduction to CSS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_10/">Applying CSS to HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_11/">Basic CSS Properties</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_12/">The Box Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_13/">Layout Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_14/">Responsive Design Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_15/">Advanced HTML Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_16/">HTML5 Semantic Elements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_17/">Forms and Inputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_18/">Linking and Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_19/">Best Practices in HTML II</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../links/">Useful Links</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development I - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Creating a Simple Webpage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-a-simple-webpage">Creating a Simple Webpage</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, you will learn how to create a basic webpage from scratch using HTML. We will go through a step-by-step guide on building a webpage with a structured layout, including a header, navigation, main content, and footer. By the end of this module, you will have created a simple webpage and gained a practical understanding of how HTML elements work together to form a cohesive website.</p>
+<h2 id="step-by-step-guide-building-a-basic-webpage">Step-by-Step Guide: Building a Basic Webpage</h2>
+<h3 id="1-setting-up-the-html-document">1. Setting Up the HTML Document</h3>
+<p>Start by setting up the basic structure of your HTML document. This includes the <code>DOCTYPE</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Simple Webpage&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;A simple webpage example&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;HTML, web development, simple webpage&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Content will go here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="2-creating-the-header">2. Creating the Header</h3>
+<p>The header of the webpage typically contains the main heading and a navigation bar. We’ll start by creating a simple header with a heading.</p>
+<pre><code class="language-html">&lt;header&gt;
+  &lt;h1&gt;Welcome to My Simple Webpage&lt;/h1&gt;
+&lt;/header&gt;
+</code></pre>
+<h3 id="3-adding-navigation">3. Adding Navigation</h3>
+<p>Next, we’ll add a basic navigation bar that allows users to navigate between different sections of your webpage or to other pages.</p>
+<pre><code class="language-html">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;nav&gt;</code> Tag</strong>: Wraps the navigation bar.</li>
+<li><strong><code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> Tags</strong>: Create an unordered list of navigation links.</li>
+<li><strong><code>&lt;a&gt;</code> Tag</strong>: Creates a hyperlink to different sections of the page.</li>
+</ul>
+<h3 id="4-creating-the-main-content-area">4. Creating the Main Content Area</h3>
+<p>The main content area is where you’ll put the core information of your webpage. This might include articles, images, or other content.</p>
+<pre><code class="language-html">&lt;main&gt;
+  &lt;section id=&quot;home&quot;&gt;
+    &lt;h2&gt;Home&lt;/h2&gt;
+    &lt;p&gt;
+      Welcome to my webpage. Here you'll find information about various topics.
+    &lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section id=&quot;about&quot;&gt;
+    &lt;h2&gt;About&lt;/h2&gt;
+    &lt;p&gt;This is a simple webpage created as part of a web development course.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section id=&quot;contact&quot;&gt;
+    &lt;h2&gt;Contact&lt;/h2&gt;
+    &lt;p&gt;Feel free to reach out via email: info@example.com&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;main&gt;</code> Tag</strong>: The main content of the webpage.</li>
+<li><strong><code>&lt;section&gt;</code> Tag</strong>: Divides content into logical sections.</li>
+</ul>
+<h3 id="5-adding-a-footer">5. Adding a Footer</h3>
+<p>Finally, we’ll add a footer at the bottom of the webpage. The footer usually contains copyright information, contact details, or links to important resources.</p>
+<pre><code class="language-html">&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2024 My Simple Webpage. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+<ul>
+<li><strong><code>&lt;footer&gt;</code> Tag</strong>: Marks the footer of the webpage.</li>
+</ul>
+<h3 id="6-putting-it-all-together">6. Putting It All Together</h3>
+<p>Here’s what the full HTML document looks like with all the sections combined:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Simple Webpage&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;A simple webpage example&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;HTML, web development, simple webpage&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Welcome to My Simple Webpage&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;main&gt;
+      &lt;section id=&quot;home&quot;&gt;
+        &lt;h2&gt;Home&lt;/h2&gt;
+        &lt;p&gt;
+          Welcome to my webpage. Here you'll find information about various
+          topics.
+        &lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;section id=&quot;about&quot;&gt;
+        &lt;h2&gt;About&lt;/h2&gt;
+        &lt;p&gt;
+          This is a simple webpage created as part of a web development course.
+        &lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;section id=&quot;contact&quot;&gt;
+        &lt;h2&gt;Contact&lt;/h2&gt;
+        &lt;p&gt;Feel free to reach out via email: info@example.com&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      &lt;p&gt;&amp;copy; 2024 My Simple Webpage. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="practice-activity-building-your-own-webpage">Practice Activity: Building Your Own Webpage</h2>
+<h3 id="objective">Objective</h3>
+<p>Create a simple webpage using the structure outlined above. This webpage should include:</p>
+<ul>
+<li>A header with a main title.</li>
+<li>A navigation bar with links to different sections of the page.</li>
+<li>A main content area with at least three sections.</li>
+<li>A footer with basic information.</li>
+</ul>
+<h3 id="instructions">Instructions</h3>
+<ol>
+<li>Create a new HTML file named <code>index.html</code>.</li>
+<li>Follow the steps provided to build your webpage.</li>
+<li>Customize the content in the <code>&lt;main&gt;</code> sections to reflect topics of your interest.</li>
+<li>Add additional sections if desired.</li>
+<li>Preview your webpage in a browser to ensure it looks and functions as expected.</li>
+</ol>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Use meaningful names for your sections to make your webpage easy to navigate.</li>
+<li>Test all your links to make sure they correctly point to the right sections.</li>
+<li>Experiment with different tags and elements to see how they affect the layout and appearance of your webpage.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_03/" class="btn btn-neutral float-left" title="HTML Document Structure"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_05/" class="btn btn-neutral float-right" title="Common HTML Elements">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_03/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_05/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
